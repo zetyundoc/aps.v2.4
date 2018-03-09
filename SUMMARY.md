@@ -25,8 +25,13 @@
 * [用户手册](user_guide.md)
   * [快速入门](user_guide/quick_start.md)
   * [分析应用](user_guide/analysis_app.md)
+    * [数据应用管理](user_guide/analysis_app/shu-ju-ying-yong-guan-li.md)
+    * [数据模块管理](user_guide/analysis_app/shu-ju-mo-kuai-guan-li.md)
+    * 分析模块管理
+    * 算法定制
+    * 任务列表管理
+    * 预定计划管理
+    * 交互探索
   * [用户中心](user_guide/user_center.md)
   * [数据应用示例](user_guide/user_case.md)
-
-
 
