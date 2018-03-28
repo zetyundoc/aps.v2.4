@@ -40,8 +40,7 @@
 
 * 标准模型
   * [概述](biao-zhun-mo-xing/gai-shu.md)
-  * [概述](README.md)
-* [Customer\_churn](customerchurn.md)
+  * [Customer\_churn](customerchurn.md)
   * [AdaBoost](adaboost.md)
   * [AsType](astype.md)
   * [Box](box.md)
