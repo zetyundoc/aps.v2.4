@@ -38,7 +38,7 @@
 
 ## 标准模型
 
-* 标准模型
+* [标准模型](biao-zhun-mo-xing/biao-zhun-mo-xing.md)
   * [概述](biao-zhun-mo-xing/gai-shu.md)
   * [Customer\_churn](customerchurn.md)
     * [AdaBoost](adaboost.md)
