@@ -36,3 +36,7 @@
   * [用户中心](user_guide/user_center.md)
   * [数据应用示例](user_guide/user_case.md)
 
+## 标准模型
+
+* 标准模型
+
