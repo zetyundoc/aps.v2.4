@@ -32,6 +32,7 @@
     * [预定计划管理](user_guide/06_scheduled_plan.md)
     * [模型仓库管理](user_guide/07_model_repo.md)
     * [交互探索](user_guide/08_inteactive_exploration.md)
+    * [快捷入口](kuai-jie-ru-kou.md)
   * [用户中心](user_guide/user_center.md)
   * [数据应用示例](user_guide/user_case.md)
 
