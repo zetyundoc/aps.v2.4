@@ -10,9 +10,9 @@ Zeppelin具有如下特点：
 Zeppelin通过解释器将任何语言/数据处理后端插入到Zeppelin中。在Zeppelin中，默认提供的解释器有Apache Spark、Python、Markdown、Shell、HDFS、Impala等。
 * **Apache Spark集成**：
 Zeppelin提供内置的Apache Spark集成。使用者不需要为其构建单独的模块、插件或库。
-* **数据可视化**
+* **数据可视化**：
 Zeppelin中包含了一些基本图表。可视化不限于Spark SQL查询，任何语言后端的任何输出都可以被识别和可视化。
-* **共享协作**
+* **共享协作**：
 笔记本网址可以在协作者之间共享，笔记本所有者做的最新更改也会在笔记本网址上被实时同步
 
 ### 界面资源介绍
