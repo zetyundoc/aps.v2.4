@@ -70,9 +70,9 @@ Zeppelin解释器是一款插件，可让Zeppelin用户使用特定的语言/数
     
 #### 查看用户环境
 Zeppelin为其每个用户都创建了一个后端操作系统用户，用户名为“AD_<Zeppelin用户名>”，工作目录为/home/用户名，文件上传目录为“/home/用户名/data/upload”。
-1. 选择“服务”>“分析应用”>“交互探索”，系统显示Zeppelin登录页面。
+1. 选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
 2. 输入用户名和密码登录Zeppelin。
-3. 在Zeppelin登录首页单击“Create new note”，在对话框中输入note名称“User environment”并单击“创建”。
+3. 在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**User environment**并单击**Create Note**。
     Zeppelin完成创建后会显示该note的编辑页面。
 4. 在第一个段落中使用shell解释器查看用户环境，如下图所示。
     ![](/user_guide/fig/fig_56.png)
@@ -80,9 +80,9 @@ Zeppelin为其每个用户都创建了一个后端操作系统用户，用户名
 #### 了解用户Python环境
 Zeppelin为每个用户提供了默认的Python执行环境，当默认Python环境的包不满足用户的需求时，用户可以使用pip从远程仓库中安装需要的外部包。
 
-1. 选择“服务”>“分析应用”>“交互探索”，系统显示Zeppelin登录页面。
+1. 选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
 2. 输入用户名和密码登录Zeppelin。
-3. 在Zeppelin登录首页单击“Create new note”，在对话框中输入note名称“Python environment”并单击“创建”。
+3. 在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**Python environment**并单击**Create Note**。
     Zeppelin完成创建后会显示该note的编辑页面。
 4. 在第一个段落中使用shell解释器查看Python环境，如下图所示。
     ![](/user_guide/fig/fig_57.png)
