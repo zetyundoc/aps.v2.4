@@ -34,6 +34,7 @@ Zeppelin笔记本由段落组成，即笔记本可以看作是一个段落容器
 #### 段落
 每个段落由两部分组成，Code section用于编辑源代码，Result Section用户显示代码运行结果。
 ![](/user_guide/fig/fig_53.png)
+
 段落右上角按钮命令如下所示：
 * 执行段落代码
 * 隐藏/显示Code Section
