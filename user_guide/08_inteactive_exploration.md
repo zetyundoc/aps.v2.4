@@ -57,6 +57,7 @@ Zeppelin笔记本由段落组成，即笔记本可以看作是一个段落容器
 ### Zeppelin解释器
 Zeppelin解释器是一款插件，可让Zeppelin用户使用特定的语言/数据处理后端。例如，要在Zeppelin中使用Scala代码，您需要%spark解释器。
 单击笔记本工具栏右侧的齿轮图标，可以查看Zeppelin已绑定的解释器，如下图所示：
+
 ![](/user_guide/fig/fig_54.png)
 
 ### Zeppelin基本操作
