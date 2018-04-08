@@ -83,7 +83,6 @@ Zeppelin为其每个用户都创建了一个后端操作系统用户，用户名
 3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**User environment**并单击**Create Note**。Zeppelin完成创建后会显示该note的编辑页面。
 
 4.在第一个段落中使用shell解释器查看用户环境，如下图所示。
-
     ![](/user_guide/fig/fig_56.png)
 
 #### 了解用户Python环境
