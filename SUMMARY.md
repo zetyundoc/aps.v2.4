@@ -34,7 +34,6 @@
     * [交互探索](user_guide/08_inteactive_exploration.md)
     * [快捷入口](kuai-jie-ru-kou.md)
   * [用户中心](user_guide/user_center.md)
-  * [数据应用示例](user_guide/user_case.md)
 
 ## 标准模型
 
