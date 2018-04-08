@@ -34,6 +34,7 @@ Zeppelin笔记本由段落组成，即笔记本可以看作是一个段落容器
 #### 段落
 每个段落由两部分组成，Code section用于编辑源代码，Result Section用户显示代码运行结果。
 ![](/user_guide/fig/fig_53.png)
+
 段落右上角按钮命令如下所示：
 * 执行段落代码
 * 隐藏/显示Code Section
@@ -56,25 +57,27 @@ Zeppelin笔记本由段落组成，即笔记本可以看作是一个段落容器
 ### Zeppelin解释器
 Zeppelin解释器是一款插件，可让Zeppelin用户使用特定的语言/数据处理后端。例如，要在Zeppelin中使用Scala代码，您需要%spark解释器。
 单击笔记本工具栏右侧的齿轮图标，可以查看Zeppelin已绑定的解释器，如下图所示：
+
 ![](/user_guide/fig/fig_54.png)
 
 ### Zeppelin基本操作
 
 #### 获取Keytab
 在APS中，通过解释器的形式将语言和数据处理后端插入到Zeppelin中，而这些后端一般都部署在CDH集群中。出于安全考虑，Zeppelin在访问CDH资源时必须进行认证，在APS中，认证的过程通过用户钥匙来实现。即用户在通过Zeppelin操作CDH资源前，需要先确保其用户钥匙是有效的。
-1. 单击**用户中心>安全中心**，进入用户钥匙管理页面。
-2. 单击**重置**，重新获取用户钥匙。
-    系统显示类似如下信息时，说明当前用户获取的用户钥匙是有效的。
+1.单击**用户中心>安全中心**，进入用户钥匙管理页面。
+2.单击**重置**，重新获取用户钥匙。
+  系统显示类似如下信息时，说明当前用户获取的用户钥匙是有效的。    
     ![](/assets/用户钥匙.png)
-    **说明**：当系统显示用户钥匙过期或失效时必须执行本步骤中的操作，否则会导致操作CDH集群资源失败。
+    
+**说明**：当系统显示用户钥匙过期或失效时必须执行本步骤中的操作，否则会导致操作CDH集群资源失败。
     
 #### 查看用户环境
 Zeppelin为其每个用户都创建了一个后端操作系统用户，用户名为“AD_<Zeppelin用户名>”，工作目录为**/home/**用户名，文件上传目录为**/home/**用户名**/data/upload**。
-1. 选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
-2. 输入用户名和密码登录Zeppelin。
-3. 在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**User environment**并单击**Create Note**。
+1.选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
+2.输入用户名和密码登录Zeppelin。
+3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**User environment**并单击**Create Note**。
     Zeppelin完成创建后会显示该note的编辑页面。
-4. 在第一个段落中使用shell解释器查看用户环境，如下图所示。
+4.在第一个段落中使用shell解释器查看用户环境，如下图所示。
     ![](/user_guide/fig/fig_56.png)
 
 #### 了解用户Python环境
@@ -108,18 +111,19 @@ Zeppelin为每个用户提供了默认的Python执行环境，当默认Python环
 #### 上传并查看文件
 Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Zeppelin用户名>”，工作目录为**/home/**用户名，文件上传目录为**/home/**用户名**/data/upload**。
 
-1. 选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
-2. 输入用户名和密码登录Zeppelin。
-3. 在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**Base R in Apache Zepplin**并单击**Create Note**。
+1.选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
+2.输入用户名和密码登录Zeppelin。
+3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**Base R in Apache Zepplin**并单击**Create Note**。
     Zeppelin完成创建后会显示该note的编辑页面。
-4. 单击页面右上角的上传文件，将本地文件**u.user**上传到Zeppelin服务器。
+4.单击页面右上角的上传文件，将本地文件**u.user**上传到Zeppelin服务器。
     
-    **说明**：在Zeppelin中，每个用户都有其独立的工作环境，每个用户上传的文件保存在其家目录下的**data/upload**目录下。
-5. 在第一个段落中使用shell解释器查看文件是否成功上传。
+**说明**：在Zeppelin中，每个用户都有其独立的工作环境，每个用户上传的文件保存在其家目录下的**data/upload**目录下。
+5.在第一个段落中使用shell解释器查看文件是否成功上传。
+
 ![](/user_guide/fig/fig_58.png)
 
 #### 编辑并运行代码
-1. 新建一个段落，并输入如下代码：
+1.新建一个段落，并输入如下代码：
      
        %spark
        val user_data = sc.textFile("data/upload/u.user")
@@ -132,7 +136,7 @@ Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Ze
        val count_by_occupation = user_fields.map(fields => (fields(3),1)).reduceByKey(_ + _).collect().toList.sortBy(_._2).map(line => line._1+"\t"+line._2).toList.mkString("\n")
        println("%table occupation\tsize\n" + count_by_occupation)
 
-2. 单击段落右上角![](/user_guide/icon/run.png)运行代码，显示结果如下所示：
+2.单击段落右上角![](/user_guide/icon/run.png)运行代码，显示结果如下所示：
 ![](/user_guide/fig/fig_59.png)
 
     代码成功运行后，默认以饼图的形式展示结果，通过单击Result Section上的操作按钮，可以将结果以不同的形式展示，如下为列表样式：
@@ -149,22 +153,28 @@ Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Ze
 #### 上传并查看文件
 Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Zeppelin用户名>”，工作目录为**/home/**用户名，文件上传目录为**/home/**用户名**/data/upload**。
 
-1. 选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
-2. 输入用户名和密码登录Zeppelin。
-3. 在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**File_import_to_Hive**并单击**Create Note**。
+1.选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
+
+2.输入用户名和密码登录Zeppelin。
+
+3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**File_import_to_Hive**并单击**Create Note**。
+
     Zeppelin完成创建后会显示该note的编辑页面。
-4. 单击页面右上角的上传文件，将本地文件stock_data.csv上传到Zeppelin服务器。                                            
+    
+4.单击页面右上角的上传文件，将本地文件stock_data.csv上传到Zeppelin服务器。                                            
 
    **说明**：在Zeppelin中，每个用户都有其独立的工作环境，每个用户上传的文件保存在其家目录下的**data/upload**目录下。
-5. 在第一个段落中使用shell解释器查看文件是否成功上传。
+   
+5.在第一个段落中使用shell解释器查看文件是否成功上传。
+
 ![](/user_guide/fig/fig_61.png)
 
 #### 编辑并运行代码
-1. 新建一个段落，并输入如下代码，将文本文件上传到HDFS的**/tmp**目录下：
+1.新建一个段落，并输入如下代码，将文本文件上传到HDFS的**/tmp**目录下：
     
          %sh
          hdfs dfs -put data/upload/stock_data.csv /tmp
-2. 新建一个段落，并输入如下代码，在Hive中创建数据库与表结构：
+2.新建一个段落，并输入如下代码，在Hive中创建数据库与表结构：
 
         %hive
         CREATE DATABASE  zet;
@@ -181,7 +191,7 @@ Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Ze
         trans_type string
         )
         PARTITIONED BY(dt String) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
-3. 新建一个段落，并输入如下代码，将HDFS中的数据文件加载到已创建的Hive表中，并进行查看：
+3.新建一个段落，并输入如下代码，将HDFS中的数据文件加载到已创建的Hive表中，并进行查看：
 
         %hive
         LOAD DATA INPATH '/tmp/stock_data.csv' INTO TABLE             zet.stock_everydate_detail4  PARTITION (dt='201312');
@@ -189,7 +199,7 @@ Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Ze
 
         select * from zet.stock_everydate_detail4 limit 10;
 
-4. 单击段落右上角的![](/user_guide/icon/run.png)运行代码，显示结果如下所示：
+4.单击段落右上角的![](/user_guide/icon/run.png)运行代码，显示结果如下所示：
 
 ![](/user_guide/fig/fig_62.png)
 
