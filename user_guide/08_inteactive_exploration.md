@@ -154,12 +154,17 @@ Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Ze
 Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Zeppelin用户名>”，工作目录为**/home/**用户名，文件上传目录为**/home/**用户名**/data/upload**。
 
 1.选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
+
 2.输入用户名和密码登录Zeppelin。
+
 3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**File_import_to_Hive**并单击**Create Note**。
+
     Zeppelin完成创建后会显示该note的编辑页面。
+    
 4.单击页面右上角的上传文件，将本地文件stock_data.csv上传到Zeppelin服务器。                                            
 
    **说明**：在Zeppelin中，每个用户都有其独立的工作环境，每个用户上传的文件保存在其家目录下的**data/upload**目录下。
+   
 5.在第一个段落中使用shell解释器查看文件是否成功上传。
 
 ![](/user_guide/fig/fig_61.png)
