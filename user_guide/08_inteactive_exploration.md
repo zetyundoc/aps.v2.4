@@ -65,6 +65,7 @@ Zeppelin解释器是一款插件，可让Zeppelin用户使用特定的语言/数
 #### 获取Keytab
 在APS中，通过解释器的形式将语言和数据处理后端插入到Zeppelin中，而这些后端一般都部署在CDH集群中。出于安全考虑，Zeppelin在访问CDH资源时必须进行认证，在APS中，认证的过程通过用户钥匙来实现。即用户在通过Zeppelin操作CDH资源前，需要先确保其用户钥匙是有效的。
 1.单击**用户中心>安全中心**，进入用户钥匙管理页面。
+
 2.单击**重置**，重新获取用户钥匙。
   系统显示类似如下信息时，说明当前用户获取的用户钥匙是有效的。    
     ![](/assets/用户钥匙.png)
@@ -74,20 +75,25 @@ Zeppelin解释器是一款插件，可让Zeppelin用户使用特定的语言/数
 #### 查看用户环境
 Zeppelin为其每个用户都创建了一个后端操作系统用户，用户名为“AD_<Zeppelin用户名>”，工作目录为**/home/**用户名，文件上传目录为**/home/**用户名**/data/upload**。
 1.选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
+
 2.输入用户名和密码登录Zeppelin。
-3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**User environment**并单击**Create Note**。
-    Zeppelin完成创建后会显示该note的编辑页面。
+
+3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**User environment**并单击**Create Note**。Zeppelin完成创建后会显示该note的编辑页面。
+
 4.在第一个段落中使用shell解释器查看用户环境，如下图所示。
+
     ![](/user_guide/fig/fig_56.png)
 
 #### 了解用户Python环境
 Zeppelin为每个用户提供了默认的Python执行环境，当默认Python环境的包不满足用户的需求时，用户可以使用pip从远程仓库中安装需要的外部包。
 
-1. 选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
-2. 输入用户名和密码登录Zeppelin。
-3. 在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**Python environment**并单击**Create Note**。
-    Zeppelin完成创建后会显示该note的编辑页面。
-4. 在第一个段落中使用shell解释器查看Python环境，如下图所示。
+1.选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
+
+2.输入用户名和密码登录Zeppelin。
+
+3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**Python environment**并单击**Create Note**。Zeppelin完成创建后会显示该note的编辑页面。
+
+4.在第一个段落中使用shell解释器查看Python环境，如下图所示。
     ![](/user_guide/fig/fig_57.png)
     上图中显示了查看Python版本、Python执行环境以及已安装包的命令以及执行结果。
     
@@ -112,12 +118,15 @@ Zeppelin为每个用户提供了默认的Python执行环境，当默认Python环
 Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Zeppelin用户名>”，工作目录为**/home/**用户名，文件上传目录为**/home/**用户名**/data/upload**。
 
 1.选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
+
 2.输入用户名和密码登录Zeppelin。
-3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**Base R in Apache Zepplin**并单击**Create Note**。
-    Zeppelin完成创建后会显示该note的编辑页面。
+
+3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**Base R in Apache Zepplin**并单击**Create Note**。Zeppelin完成创建后会显示该note的编辑页面。
+
 4.单击页面右上角的上传文件，将本地文件**u.user**上传到Zeppelin服务器。
     
 **说明**：在Zeppelin中，每个用户都有其独立的工作环境，每个用户上传的文件保存在其家目录下的**data/upload**目录下。
+
 5.在第一个段落中使用shell解释器查看文件是否成功上传。
 
 ![](/user_guide/fig/fig_58.png)
