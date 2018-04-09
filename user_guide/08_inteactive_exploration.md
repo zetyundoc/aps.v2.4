@@ -4,27 +4,38 @@ APS支持的数据处理流程包括商业理解、数据理解、数据准备�
 ### 概念与特性
 Zeppelin是一个基于Web的可实现交互式数据分析的笔记本，它支持数据可视化、多语言后端以及笔记本的协作分享。
 Zeppelin具有如下特点：
+
 * **多用途笔记本**：
+
 在Zeppelin中个，通过笔记本可以实现数据摄入、数据发现、数据分析、数据可视化与协作等操作。
+
 * **多语言后端**：
+
 Zeppelin通过解释器将任何语言/数据处理后端插入到Zeppelin中。在Zeppelin中，默认提供的解释器有Apache Spark、Python、Markdown、Shell、HDFS、Impala等。
+
 * **Apache Spark集成**：
+
 Zeppelin提供内置的Apache Spark集成。使用者不需要为其构建单独的模块、插件或库。
+
 * **数据可视化**：
+
 Zeppelin中包含了一些基本图表。可视化不限于Spark SQL查询，任何语言后端的任何输出都可以被识别和可视化。
+
 * **共享协作**：
-笔记本网址可以在协作者之间共享，笔记本所有者做的最新更改也会在笔记本网址上被实时同步
+
+笔记本网址可以在协作者之间共享，笔记本所有者做的最新更改也会在笔记本网址上被实时同步。
 
 ### 界面资源介绍
 
 #### 首页
-进入**服务>交互探索**，单击右上角的**Login**，输入账号和密码，登录Zeppelin，首页如下图所示：
+进入“服务”>“交互探索”，单击右上角的“Login”，输入账号和密码，登录Zeppelin，首页如下图所示：
 ![](/assets/zeppline登录首页.png)
 * 页面左侧列出所有现有的笔记本。
 
     **说明**：每个用户Zeppelin的登录首页仅显示自己拥有的以及别人共享的笔记本。
-* 单击**Import note**可以从本地磁盘或从远程位置导入您的笔记本。
-* 单击**Create note**可以创建一个新的笔记本。
+* 单击“Import note”可以从本地磁盘或从远程位置导入您的笔记本。
+
+* 单击“Create note”可以创建一个新的笔记本。
 
 #### 笔记本
 
@@ -36,9 +47,13 @@ Zeppelin笔记本由段落组成，即笔记本可以看作是一个段落容器
 ![](/user_guide/fig/fig_53.png)
 
 段落右上角按钮命令如下所示：
+
 * 执行段落代码
+
 * 隐藏/显示Code Section
+
 * 隐藏/显示Result Section
+
 * 配置段落
 
 #### 笔记本工具栏
@@ -47,11 +62,17 @@ Zeppelin笔记本由段落组成，即笔记本可以看作是一个段落容器
 
 工具栏按钮的作用如下所示：
 * 按顺序执行所有段落
+
 * 隐藏/显示Code Section
+
 * 隐藏/显示Result Section
+
 * 清除所有段落的Result Section
+
 * 克隆当前笔记本
+
 * 将当前笔记本导出为JSON文件
+
 * 切换到所有者模式
 
 ### Zeppelin解释器
@@ -65,9 +86,9 @@ Zeppelin解释器是一款插件，可让Zeppelin用户使用特定的语言/数
 #### 获取Keytab
 在APS中，通过解释器的形式将语言和数据处理后端插入到Zeppelin中，而这些后端一般都部署在CDH集群中。出于安全考虑，Zeppelin在访问CDH资源时必须进行认证，在APS中，认证的过程通过用户钥匙来实现。即用户在通过Zeppelin操作CDH资源前，需要先确保其用户钥匙是有效的。
 
-1.单击**用户中心>安全中心**，进入用户钥匙管理页面。
+1.单击“用户中心”>“安全中心”，进入用户钥匙管理页面。
 
-2.单击**重置**，重新获取用户钥匙。
+2.单击“重置”，重新获取用户钥匙。
   系统显示类似如下信息时，说明当前用户获取的用户钥匙是有效的。    
     ![](/assets/用户钥匙.png)
     
@@ -76,11 +97,11 @@ Zeppelin解释器是一款插件，可让Zeppelin用户使用特定的语言/数
 #### 查看用户环境
 Zeppelin为其每个用户都创建了一个后端操作系统用户，用户名为“AD_<Zeppelin用户名>”，工作目录为**/home/**用户名，文件上传目录为**/home/**用户名**/data/upload**。
 
-1.选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
+1.选择“服务”>“分析应用”>“交互探索”，系统显示Zeppelin登录页面。
 
 2.输入用户名和密码登录Zeppelin。
 
-3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**User environment**并单击**Create Note**。Zeppelin完成创建后会显示该note的编辑页面。
+3.在Zeppelin登录首页单击“Create new note”，在对话框中输入note名称“User environment”并单击“Create Note”。Zeppelin完成创建后会显示该note的编辑页面。
 
 4.在第一个段落中使用shell解释器查看用户环境，如下图所示。
     ![](/user_guide/fig/fig_56.png)
@@ -88,11 +109,11 @@ Zeppelin为其每个用户都创建了一个后端操作系统用户，用户名
 #### 了解用户Python环境
 Zeppelin为每个用户提供了默认的Python执行环境，当默认Python环境的包不满足用户的需求时，用户可以使用pip从远程仓库中安装需要的外部包。
 
-1.选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
+1.选择“服务”>“分析应用”>“交互探索”，系统显示Zeppelin登录页面。
 
 2.输入用户名和密码登录Zeppelin。
 
-3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**Python environment**并单击**Create Note**。Zeppelin完成创建后会显示该note的编辑页面。
+3.在Zeppelin登录首页单击“Create new note”，在对话框中输入note名称“Python environment”并单击“Create Note”。Zeppelin完成创建后会显示该note的编辑页面。
 
 4.在第一个段落中使用shell解释器查看Python环境，如下图所示。
     ![](/user_guide/fig/fig_57.png)
@@ -107,7 +128,7 @@ Zeppelin为每个用户提供了默认的Python执行环境，当默认Python环
 
 ### R语言统计分析示例
 #### 场景说明
-本节使用Zeppelin的R解释器实现一个文本文件**u.user**包含的人员的职业统计分析。在该文本文件中共包含943条记录，每条记录分别由**序号**、**年龄**、**性别**、**职业**和**邮编**组成，不同字段之间使用“|”进行分割，部分样例数据如下所示：
+本节使用Zeppelin的R解释器实现一个文本文件“u.user”包含的人员的职业统计分析。在该文本文件中共包含943条记录，每条记录分别由序号、年龄、性别、职业和邮编组成，不同字段之间使用“|”进行分割，部分样例数据如下所示：
              
     1|24|M|technician|85711
     2|53|F|other|94043
@@ -118,13 +139,13 @@ Zeppelin为每个用户提供了默认的Python执行环境，当默认Python环
 #### 上传并查看文件
 Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Zeppelin用户名>”，工作目录为**/home/**用户名，文件上传目录为**/home/**用户名**/data/upload**。
 
-1.选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
+1.选择“服务”>“分析应用”>“交互探索”，系统显示Zeppelin登录页面。
 
 2.输入用户名和密码登录Zeppelin。
 
-3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**Base R in Apache Zepplin**并单击**Create Note**。Zeppelin完成创建后会显示该note的编辑页面。
+3.在Zeppelin登录首页单击“Create new note”，在对话框中输入note名称“Base R in Apache Zepplin”并单击“Create Note”。Zeppelin完成创建后会显示该note的编辑页面。
 
-4.单击页面右上角的上传文件，将本地文件**u.user**上传到Zeppelin服务器。
+4.单击页面右上角的上传文件，将本地文件“u.user”上传到Zeppelin服务器。
 
 **说明**：在Zeppelin中，每个用户都有其独立的工作环境，每个用户上传的文件保存在其家目录下的**data/upload**目录下。
 
@@ -154,7 +175,7 @@ Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Ze
 
 ### Hive建表示例
 ####场景说明
-本节使用Zeppelin的sh解释器和hive解释器将一个本地文件上传到HDFS，在Hive中创建数据表并将数据文件加载到Hive表中，从而可以通过Hive SQL进行数据探查，避免开发繁琐的MapReduce程序。本节示例使用的文本文件样例如下所示，每条记录由**股票名**、**股票类型**、**交易时间**、**价格**等字段组成，不同字段之间由“,”分割。
+本节使用Zeppelin的sh解释器和hive解释器将一个本地文件上传到HDFS，在Hive中创建数据表并将数据文件加载到Hive表中，从而可以通过Hive SQL进行数据探查，避免开发繁琐的MapReduce程序。本节示例使用的文本文件样例如下所示，每条记录由股票名、股票类型、交易时间、价格等字段组成，不同字段之间由“,”分割。
           
           sh600000,JRHY,2013-12-26 15:00:07,9.09,0.01,0,0,1
           sh600000,JRHY,2013-12-26 15:00:02,9.08,-0.01,40,36320,-1
@@ -163,11 +184,11 @@ Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Ze
 #### 上传并查看文件
 Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Zeppelin用户名>”，工作目录为**/home/**用户名，文件上传目录为**/home/**用户名**/data/upload**。
 
-1.选择**服务>分析应用>交互探索**，系统显示Zeppelin登录页面。
+1.选择“服务”>“分析应用”>“交互探索”，系统显示Zeppelin登录页面。
 
 2.输入用户名和密码登录Zeppelin。
 
-3.在Zeppelin登录首页单击**Create new note**，在对话框中输入note名称**File_import_to_Hive**并单击**Create Note**。Zeppelin完成创建后会显示该note的编辑页面。
+3.在Zeppelin登录首页单击“Create new note”，在对话框中输入note名称“File_import_to_Hive”并单击“Create Note”。Zeppelin完成创建后会显示该note的编辑页面。
     
 4.单击页面右上角的上传文件，将本地文件stock_data.csv上传到Zeppelin服务器。
    
