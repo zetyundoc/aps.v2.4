@@ -205,7 +205,7 @@ Zeppelin为其每个用户都创建了一个后端用户，用户名为“AD_<Ze
 
 2.输入用户名和密码登录Zeppelin。
 
-3.在Zeppelin登录首页单击“Create new not“”，在对话框中输入note名称“File_import_to_Hive”并单击“Create Note”。Zeppelin完成创建后会显示该note的编辑页面。
+3.在Zeppelin登录首页单击“Create new note“”，在对话框中输入note名称“File_import_to_Hive”并单击“Create Note”。Zeppelin完成创建后会显示该note的编辑页面。
     
 4.单击页面右上角的上传文件，将本地文件stock_data.csv上传到Zeppelin服务器。
    
