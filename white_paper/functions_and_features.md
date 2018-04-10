@@ -100,11 +100,11 @@ APS提供了一个让交互式数据分析变得可行的基于网页的notebook
 
 * **数据可视化**
 
-根据查询出来的数据进行不同图形的可视化呈现
+根据查询出来的数据进行不同图形的可视化呈现。
 
 * **支持多语言**
 
-包括 Scala (使用 Apache Spark)、Python (Apache Spark)、SparkSQL、 Hive、 Markdown、Shell等等
+包括 Scala (使用 Apache Spark)、Python (Apache Spark)、SparkSQL、 Hive、 Markdown、Shell等等。
 
 ![](/white_paper/fig/fig_04.png)
 
