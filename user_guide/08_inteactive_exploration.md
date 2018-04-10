@@ -45,29 +45,45 @@ Zeppelin中包含了一些基本图表。可视化不限于Spark SQL查询，任
 #### 笔记本
 
 Zeppelin笔记本由段落组成，即笔记本可以看作是一个段落容器。
+
 ![](/user_guide/fig/fig_52.png)
 
 #### 段落
+
 每个段落由两部分组成，Code section用于编辑源代码，Result Section用户显示代码运行结果。
+
 ![](/user_guide/fig/fig_53.png)
 
 段落右上角按钮命令如下所示：
+
 * 执行段落代码
+
 * 隐藏/显示Code Section
+
 * 隐藏/显示Result Section
+
 * 配置段落
 
 #### 笔记本工具栏
+
 在笔记本顶部是一个包含显示命令以及配置、安全性和显示选项的工具栏。
+
 ![](/user_guide/fig/fig_88.png)
 
 工具栏按钮的作用如下所示：
+
 * 按顺序执行所有段落
+
 * 隐藏/显示Code Section
+
 * 隐藏/显示Result Section
+
 * 清除所有段落的Result Section
+
 * 克隆当前笔记本
+
 * 将当前笔记本导出为JSON文件
+
 * 切换到所有者模式
 
 ### Zeppelin解释器
