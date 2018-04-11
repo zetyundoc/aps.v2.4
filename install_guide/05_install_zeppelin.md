@@ -1,7 +1,6 @@
 
 
 
-
 #  安装概览
 
 ##安装说明
@@ -62,14 +61,14 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
     
     * 检查/mnt/nfsfile/log/ 下面的zeppelin目录权限属于775 和 zeppelin用户,若不是则
 
-    ```
-    chown -R zeppelin:zeppelin /mnt/nfsfile/log/zeppelin
-    ```
+      ```
+      chown -R zeppelin:zeppelin /mnt/nfsfile/log/zeppelin
+      ```
     * 检查/mnt/nfsfile/zeppelin/下的conf 和notebook 权限属于755 和 zeppelin,若不是则
     
-    ```
-    chown -R zeppelin:zeppelin /mnt/nfsfile/zeppelin/
-    ```
+      ```
+      chown -R zeppelin:zeppelin /mnt/nfsfile/zeppelin/
+      ```
   6. 进入aps02节点，用zeppelin用户启动命令
 
     ```
