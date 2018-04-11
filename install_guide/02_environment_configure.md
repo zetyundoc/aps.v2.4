@@ -26,6 +26,7 @@
 
   ```
   
+  
 2. 修改服务器网卡参数。（需要根据实际网卡名称调整或增加此参数）。
 
   ```
@@ -34,6 +35,10 @@
   PEERDNS="no"
   ONBOOT="yes"
 
+  ```
+  修改需执行如下命令重启网卡：
+  ```
+  systemctl restart network
   ```
   
 3. 检查磁盘
@@ -94,10 +99,10 @@
   # ssh-copy-id 第三个节点IP
   # ssh-copy-id 第四个节点IP
 
-  # scp -r .ssh aps01:~
-  # scp -r .ssh aps02:~
-  # scp -r .ssh aps03:~
-  # scp -r .ssh aps04:~
+  # scp -r .ssh 第一个节点IP:~
+  # scp -r .ssh 第二个节点IP:~
+  # scp -r .ssh 第三个节点IP:~
+  # scp -r .ssh 第四个节点IP:~
 
   ```
 
@@ -122,10 +127,10 @@
   # ssh-copy-id 第三个节点IP
   # ssh-copy-id 第四个节点IP
 
-  # scp -r .ssh aps01:~
-  # scp -r .ssh aps02:~
-  # scp -r .ssh aps03:~
-  # scp -r .ssh aps04:~
+  # scp -r .ssh 第一个节点IP:~
+  # scp -r .ssh 第二个节点IP:~
+  # scp -r .ssh 第三个节点IP:~
+  # scp -r .ssh 第四个节点IP:~
 
   ```
 
