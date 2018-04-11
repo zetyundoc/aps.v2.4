@@ -222,8 +222,30 @@ vi /etc/fatab
    备注：
     
    1. 如果安装失败继续执行，需要删除/tmp下的安装日志/tmp/aps_installation_failure_exit_code，并把aps.sh脚本里的最后边，注释掉已经安装成功的组件，如下图所示：
-    
-    ![](fig/fig_03.png)
+   
+     ```
+       if [ "SAPS_INSTALL_MODE" = "all" ];then
+       #   check_system
+       #   install_httpServer
+       #   install_ansible
+       #   aps_set_install_env
+       #   install_dnsmasq
+       #   install_nfs
+         install_docker
+         install_zookeeper
+         install_mesos
+         install_rabbitmq
+         install_keepalived
+         install_postgresql
+         install_consul
+         instll_git
+         install_zeppelin
+         install_nagios
+         install_aps
+      fi
+      # end
+      
+     ```
      
    2. 如果在install Docker-CE这一步出错的话：执行步骤为:
 
