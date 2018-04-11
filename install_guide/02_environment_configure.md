@@ -85,7 +85,6 @@ hostnamectl set-hostname aps04.zetyun.com
 ```
 # ssh-keygen -f ~/.ssh/id_rsa -N '' -t rsa -q -b 2048
 ```
-
 2. 执行ssh-copy-id命令，将本机公钥发送给APS所有的主机的root用户。
 
 ```
