@@ -82,9 +82,10 @@ hostnamectl set-hostname aps04.zetyun.com
 
 1. 以root用户登录节点IP为10.200.139.11的服务器, 执行**ssh-keygen -f ~/.ssh/id_rsa -N '' -t rsa -q -b 2048**命令，生成公私钥。
 
-```
+  ```
 # ssh-keygen -f ~/.ssh/id_rsa -N '' -t rsa -q -b 2048
-```
+  ```
+  
 2. 执行ssh-copy-id命令，将本机公钥发送给APS所有的主机的root用户。
 
 ```
