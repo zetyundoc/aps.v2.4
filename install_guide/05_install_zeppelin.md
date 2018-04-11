@@ -102,14 +102,15 @@
   
   ![](/install_guide/fig/fig_05.png)
   
-   **Properties（示例）**
-   
-   | name | value|
-   | :--- | :--- |                 
-   | zeppelin.interpreter.localRepo  |   /opt/zeppelin/local-repo/2D81Y8APD |
-   | zeppelin.interpreter.output.limit | 102400 |
-   | zeppelin.python |	python |
-   | zeppelin.python.maxResult |   1000|
+  **Properties（示例）**
+  
+  | name | value|
+  | :--- | :--- |
+  | zeppelin.interpreter.localRepo | /opt/zeppelin/local-repo/2D81Y8APD |
+  | zeppelin.interpreter.output.limit | 102400 |
+  | zeppelin.python |	python |
+  | zeppelin.python.maxResult | 1000|
+
 
    **测试方法**
     
