@@ -79,7 +79,7 @@
     #./zeppelin-daemon.sh start
     ```
     
-###配置Zeppelin的Interpreter
+### 配置Zeppelin的Interpreter
 
 使用AD需要配置模拟用户，不使用AD不是用模拟用户
 
