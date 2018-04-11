@@ -32,8 +32,7 @@ Zeppelin中包含了一些基本图表。可视化不限于Spark SQL查询，任
 #### 首页
 进入“服务”>“交互探索”，单击右上角的“Login”，输入账号和密码，登录Zeppelin，首页如下图所示：
 
-![](/assets/zeppline登录首页.png)
-
+![](/assets/zeppline登录首页_v2.png)
 * 页面左侧列出所有现有的笔记本。
 
     **说明**：每个用户Zeppelin的登录首页仅显示自己拥有的以及别人共享的笔记本。
