@@ -12,7 +12,6 @@
   * [系统配置](white_paper/system_configuration.md)
   * [经典案例](white_paper/classic_cases.md)
 
-
 ## 安装手册
 
 * [安装手册](install_guide.md)
@@ -88,6 +87,7 @@
   * [Ensemble](ensemble.md)
     * [AdaBoost](adaboost.md)
     * [AdaboostClassSPy3](adaboostclassspy3.md)
+    * [BaggingClassSpy3](baggingclassspy3.md)
     * [Stacking](stacking.md)
     * [Xgboost::ensemble](xgboostensemble.md)
   * [FeatureSelection](featureselection.md)
