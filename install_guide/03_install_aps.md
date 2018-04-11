@@ -218,10 +218,12 @@ vi /etc/fatab
     该脚本会完成系统检查以及各基础组件的安装。
 
         
-    备注：
+   备注：
 
-    1. 如果安装失败继续执行，需要删除/tmp下的安装日志/tmp/aps_installation_failure_exit_code，并把aps.sh脚本里的最后边，注释掉已经安装成功的组件：如图，
- 
+    1. 如果安装失败继续执行，需要删除/tmp下的安装日志/tmp/aps_installation_failure_exit_code，并把aps.sh脚本里的最后边，注释掉已经安装成功的组件，如下图所示：
+    
+    ![](fig/fig_03.png)
+     
     2. 如果在install Docker-CE这一步出错的话：执行步骤为:
 
         到除节点一之外的节点上，分别执行脚本/usr/local/aps/tmp/devicemapper.sh，然后在节点一注释掉如上图部分内容，之后继续执行./aps.sh -m all;
