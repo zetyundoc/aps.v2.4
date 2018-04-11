@@ -188,6 +188,7 @@
  
   **Properties**
   
+  
   | name | value |
   | :--- | :--- |
   | common.max_count |	1000  |
@@ -203,8 +204,10 @@
   | zeppelin.jdbc.keytab.location | -   |
   | zeppelin.jdbc.principal |	-  |
 
+
   **Dependencies（示例）**
-  
+ 
+   
   | artifact |	exclude  |
   | :--- | :--- |
   | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar|	-    |
