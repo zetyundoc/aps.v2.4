@@ -138,9 +138,9 @@
   # aps-deploy/bin/aps-base-install.sh
   ```
   
-2.脚本拷贝到每台节点的 root 目录下
+2. 脚本拷贝到每台节点的 root 目录下
 
-3.用root用户在第一台节点执行以下命令：
+3. 用root用户在第一台节点执行以下命令：
       ```
       ssh aps01 sh /root/aps-base-install.sh
       ssh aps02 sh /root/aps-base-install.sh
