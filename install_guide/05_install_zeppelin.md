@@ -119,7 +119,7 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
   
   ![](/install_guide/fig/fig_06.png)
   
-    | name	  |	 value |
+   | name	  |	 value |
     | :--- | :--- | :--- |                  
     | zeppelin.interpreter.localRepo(不添加)  |   opt/zeppelin/local-repo/2CYVZF7AQ |
     | zeppelin.interpreter.output.limit |	102400 |
