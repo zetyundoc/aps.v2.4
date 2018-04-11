@@ -40,18 +40,79 @@
 
   1. 检查每个节点是否具有单独1块数据盘，用于做docker存储，检查命令如下：
   
-  ```
-  sudo fdisk -l
-  ```
+        ```
+      sudo fdisk -l
+      ```
   
   2. 检查nfs共享盘检查其中1个节点是否有第2块数据盘，用于做nfs共享盘，检查命令如下：
 
-  ```
-  sudo fdisk -l
-  ```
+        ```
+      sudo fdisk -l
+      ```
   
   3. 检查repo磁盘，在第一个节点上，磁盘空间为2T，查看命令：
  
-   ```
-  sudo fdisk -l
-  ```
+     ```
+    sudo fdisk -l
+    ```
+  
+## 设置主机名
+
+主机名用于标识一台主机，请按照如下步骤配置主机名,根据集群实际节点数进行修改。
+
+1. 用root用户执行如下命令：
+```
+（1节点执行）
+hostnamectl set-hostname aps01.zetyun.com
+（2节点执行）
+hostnamectl set-hostname aps02.zetyun.com
+（3节点执行）
+hostnamectl set-hostname aps03.zetyun.com
+（4节点执行）
+hostnamectl set-hostname aps04.zetyun.com
+```
+2.关闭当前控制台并重新登录，检查主机名是否修改成功。
+
+## 配置信任关系
+
+### 配置root用户信任关系
+在复制CDH Client时，不同节点之间需要相互执行shell操作，因此需要配置各节点之间的信任关系。
+
+本节示例以配置两个节点的ssh信任关系为例进行说明，在实际操作时需要为所有节点之间配置信任关系。
+
+1. 以root用户登录节点IP为10.200.139.11的服务器, 执行**ssh-keygen -f ~/.ssh/id_rsa -N '' -t rsa -q -b 2048**命令，生成公私钥。
+
+```
+# ssh-keygen -f ~/.ssh/id_rsa -N '' -t rsa -q -b 2048
+```
+
+2. 执行ssh-copy-id命令，将本机公钥发送给APS所有的主机的root用户。
+
+```
+# ssh-copy-id 第一个节点IP
+# ssh-copy-id 第二个节点IP
+# ssh-copy-id 第三个节点IP
+# ssh-copy-id 第四个节点IP
+
+# scp -r .ssh aps01:~
+# scp -r .ssh aps02:~
+# scp -r .ssh aps03:~
+# scp -r .ssh aps04:~
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
