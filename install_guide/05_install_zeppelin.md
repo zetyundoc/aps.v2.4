@@ -104,7 +104,6 @@
   
    **Properties（示例）**
    
-   
    | name | value|
    | :--- | :--- |                 
    | zeppelin.interpreter.localRepo  |   /opt/zeppelin/local-repo/2D81Y8APD |
@@ -124,8 +123,7 @@
    **Properties（示例）**
   
    ![](/install_guide/fig/fig_06.png)
-   
-   
+
    | name | value |
    | :--- | :--- |               
    | zeppelin.interpreter.localRepo(不添加)  |   opt/zeppelin/local-repo/2CYVZF7AQ |
