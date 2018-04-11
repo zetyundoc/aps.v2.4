@@ -144,7 +144,7 @@ vi /etc/fatab
 
 5. 修改配置文件“/home/aps/aps-deploy/conf/aps.yml”。
 
- 该配置文件用于配置相关组件的工作目录、IP地址等运行环境信息，其中大部分参数保留默认值即可，只需要关注并修改如下参数（参考示例，仅用于测试环境）：
+   该配置文件用于配置相关组件的工作目录、IP地址等运行环境信息，其中大部分参数保留默认值即可，只需要关注并修改如下参数（参考示例，仅用于测试环境）：
  
  * 配置docker存储所需磁盘（每个节点磁盘规划统一的情况下配置）
   
@@ -216,15 +216,17 @@ vi /etc/fatab
      $ ./aps.sh -m all
     ```
     该脚本会完成系统检查以及各基础组件的安装。
-    
-备注：
-1. 如果安装失败继续执行，需要删除/tmp下的安装日志/tmp/aps_installation_failure_exit_code，并把aps.sh脚本里的最后边，注释掉已经安装成功的组件：如图，
+
+        
+    备注：
+
+    1. 如果安装失败继续执行，需要删除/tmp下的安装日志/tmp/aps_installation_failure_exit_code，并把aps.sh脚本里的最后边，注释掉已经安装成功的组件：如图，
  
-2. 如果在install Docker-CE这一步出错的话：执行步骤为:
+    2. 如果在install Docker-CE这一步出错的话：执行步骤为:
 
-到除节点一之外的节点上，分别执行脚本/usr/local/aps/tmp/devicemapper.sh，然后在节点一注释掉如上图部分内容，之后继续执行./aps.sh -m all;
+        到除节点一之外的节点上，分别执行脚本/usr/local/aps/tmp/devicemapper.sh，然后在节点一注释掉如上图部分内容，之后继续执行./aps.sh -m all;
 
-3. 以上aps.sh执行成功后，aps用户在节点一上执行jps查看Controller,Scheduler,HeronServer,das,mpserver.jar,UserCenter,SpecsServer,FalconServer是否启动，使用docker ps 查看pipes,compass 是否启动。使用root用户在节点二上执行jps查看keytabserver是否启动成功。(执行jps，如果显示command not found。执行source /etc/profile。再次执行jps验证。)
+    3. 以上aps.sh执行成功后，aps用户在节点一上执行jps查看Controller,Scheduler,HeronServer,das,mpserver.jar,UserCenter,SpecsServer,FalconServer是否启动，使用docker ps 查看pipes,compass 是否启动。使用root用户在节点二上执行jps查看keytabserver是否启动成功。(执行jps，如果显示command not found。执行source /etc/profile。再次执行jps验证。)
 
 
 
