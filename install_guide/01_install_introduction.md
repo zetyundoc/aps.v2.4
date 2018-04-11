@@ -35,6 +35,8 @@ APS组件结构图如下所示：
 | keepalived |	1.3.5-1.el7 |
 | Nagios |	4.3.4 |
 
+说明:APS组件是指compass, pipes、dasserver,heron等私有组件。
+
 ### 安装规划
 
 #### 安装用户规划
@@ -48,6 +50,7 @@ APS组件结构图如下所示：
 |zeppelin |	zeppelin |	zeppelin |   aps02  aps03   |
 
 #### 主机名规划和IP地址规划
+
 |服务器序号	| 域名				| Hostname	|  IPv4地址              |
 | :--- | :--- | :--- | :--- |                                        
 |1			| aps01.zetyun.com	| aps01     |  请根据实际情况配置	 |
@@ -55,6 +58,32 @@ APS组件结构图如下所示：
 |3			| aps03.zetyun.com	| aps03	    |  请根据实际情况配置    |
 |4			| aps04.zetyun.com	| aps04	    | 请根据实际情况配置    |
 
+### 软件部署规划
 
+软件部署规划如下表所示，第一行表示安装的主机，从第二行开始每行表示一个组件及其部署主机。
 
+|aps01			       | aps02			     |  aps03 				|    aps04            |
+| :--- | :--- | :--- | :--- |                                                             
+|docker-ce		       | docker-ce		     |  docker-ce			|     docker-ce       |
+|dnsmasq			   | dnsmasq		 |  	    -			|		-             |
+|consul(server)	       | consul(server)	     |  consul(server)		|      consul(client) |
+|Zookeeper		       | Zookeeper		     |  Zookeeper	        |    -                 |
+|mesos(master)	       | mesos(master)	     |  mesos(master)	    |     -                |
+|mesos(slave)	       | mesos(slave)	     |  mesos(slave)        |      -               |
+|git				   |     git		     |     -                 |      -               |
+|-				       | rabbitmq		     |  rabbitmq	        |       -              |
+|-				       | postgresql		     |  postgresql	        |      -               |
+|-				       | keepalived		     |  keepalived	        |      -               |
+|-				       | Zeppelin		     |  Zeppelin			|    -                |
+|nagios（server\agent） |	nagios（agent）  | 		nagios（agent）	|	nagios（agent）   |
+|aps					|	aps				 |  	-				|	-                 |
 
+## 安装包列表
+
+在安装前，请获取如下安装包：
+
+|安装包名称	|说明|
+| :--- | :--- |
+|aps-deploy-*tgz	|APS安装包，包括基础组件以及APS私有组件的安装程序包以及安装脚本。|
+
+说明:安装包名称中的*表示软件版本号，请以实际情况为准。
