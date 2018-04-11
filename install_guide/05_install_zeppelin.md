@@ -6,9 +6,9 @@
 
 ## 安装及配置Zeppelin
 
-1. 安装Zeppelin组件（主备都需要执行）
+请参照如下步骤安装Zeppelin组件，以下步骤在主备都需要执行。
 
- 1. 基础配置(在aps02上执行)
+1. 基础配置(在aps02上执行)
     ```
    zeppelin的日志和配置目录修改 新建/mnt/nfsfile/log/zeppelin目录
    sudo su - root
@@ -19,16 +19,16 @@
    chmod 777 -R /mnt/nfsfile/log/
    ```
  
- 2. 备份
+2. 备份
  ```
 sudo su - root
 cp -r /mnt/nfsfile/zeppelin/conf  /mnt/nfsfile/zeppelin/confbak
  ```
- 3. 修改配置文件（aps02，aps03主备）
+3. 修改配置文件（aps02，aps03主备）
  ```
 su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CONF_DIR="/mnt/nfsfile/zeppelin/conf" export ZEPPELIN_LOG_DIR="/mnt/nfsfile/log/zeppelin"
  ```
- 4. 修改shrio.ini （aps02，aps03主备）
+4. 修改shrio.ini （aps02，aps03主备）
  
     文件路径
  
@@ -48,7 +48,7 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
     cp shrio.ini.NOAD shrio.ini
     ```
     
-   5. 检查Zeppelin配置文件及启动服务
+5. 检查Zeppelin配置文件及启动服务
  
     * 检查aps02和aps03节点的/opt/zeppelin/ 都属于zeppelin用户除了bin下面的delete_user_util.sh 和 removeInterpreter.sh为root用户,若不是则
 
@@ -66,7 +66,7 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
       ```
       chown -R zeppelin:zeppelin /mnt/nfsfile/zeppelin/
       ```
-  6. 进入aps02节点，用zeppelin用户启动命令
+6. 进入aps02节点，用zeppelin用户启动命令
 
     ```
     #su - zeppelin
@@ -97,15 +97,16 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
   1. 配置Shell
   
   ![](/install_guide/fig/fig_05.png)
+  
  
     **Properties（示例）**
 
-    |name	  |	 value|
+    | name	  |	 value|
     | :--- | :--- | :--- |                  
-    |zeppelin.interpreter.localRepo  |   /opt/zeppelin/local-repo/2D81Y8APD|
-    |zeppelin.interpreter.output.limit |	102400|
-    |zeppelin.python |	python|
-    |zeppelin.python.maxResult |   1000|
+    | zeppelin.interpreter.localRepo  |   /opt/zeppelin/local-repo/2D81Y8APD |
+    | zeppelin.interpreter.output.limit | 102400 |
+    | zeppelin.python |	python |
+    | zeppelin.python.maxResult |   1000|
 
     **测试方法**
     
@@ -120,12 +121,12 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
   
   ![](/install_guide/fig/fig_06.png)
   
-    |name	  |	 value|
+    | name	  |	 value |
     | :--- | :--- | :--- |                  
-    |zeppelin.interpreter.localRepo(不添加)  |   opt/zeppelin/local-repo/2CYVZF7AQ|
-    |zeppelin.interpreter.output.limit |	102400|
-    |zeppelin.python |	python|
-    |zeppelin.python.maxResult |   1000|
+    | zeppelin.interpreter.localRepo(不添加)  |   opt/zeppelin/local-repo/2CYVZF7AQ |
+    | zeppelin.interpreter.output.limit |	102400 |
+    | zeppelin.python | python |
+    | zeppelin.python.maxResult |   1000|
 
     **测试方法：**
     
@@ -141,32 +142,32 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
   
   **Properties**
   
-    |name	  |	 value|
+    | name	  |	 value |
     | :--- | :--- | :--- |                  
-    |common.max_count|  1000|
-    |default.driver |	org.apache.hive.jdbc.HiveDriver|
-    |default.password |	python|
-    |default.url（根据实际cdh集群进行配置） | jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user|
-    |default.user|	hive|
-    |zeppelin.interpreter.localRepo（不添加） |	python|
-    |zeppelin.python.maxResult |  /opt/zeppelin/local-repo/2DAADHRKQ|
-    |zeppelin.interpreter.output.limit|  102400|
-    |zeppelin.jdbc.auth.type	 |KERBEROS|
-    |zeppelin.jdbc.concurrent.max_connection |	10|
-    |zeppelin.jdbc.concurrent.use|true|
-    |zeppelin.jdbc.keytab.location|	|
-    |zeppelin.jdbc.principal	 |	|
+    | common.max_count |  1000|
+    | default.driver |	org.apache.hive.jdbc.HiveDriver |
+    | default.password |	python|
+    | default.url（根据实际cdh集群进行配置） | jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user |
+    | default.user|	hive |
+    | zeppelin.interpreter.localRepo（不添加） | python |
+    | zeppelin.python.maxResult |  /opt/zeppelin/local-repo/2DAADHRKQ|
+    | zeppelin.interpreter.output.limit |  102400|
+    | zeppelin.jdbc.auth.type	 | KERBEROS|
+    | zeppelin.jdbc.concurrent.max_connection |	10|
+    | zeppelin.jdbc.concurrent.use | true |
+    | zeppelin.jdbc.keytab.location|	|
+    | zeppelin.jdbc.principal	 |	|
 
   **Dependencies**
   
-    |artifact	  |	 exclude|
+    | artifact	  |	 exclude |
     | :--- | :--- | :--- |                  
-    |/opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar	|  |
-    |/opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar |  |
-    |default.password | |
-    |/opt/cloudera/parcels/CDH/jars/hadoop-common-2.6.0-cdh5.10.1.jar | |
-    |/opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar|	|
-    |/opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar |	 |
+    | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar	|  |
+    | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar |  |
+    | default.password | |
+    | /opt/cloudera/parcels/CDH/jars/hadoop-common-2.6.0-cdh5.10.1.jar | |
+    | /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar |	|
+    | /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar |	 |
   
   **测试方法**
   
@@ -184,30 +185,30 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
  
   **Properties**
   
-  |name|		value |
+  | name |		value |
   | :--- | :--- |
-  |common.max_count|		1000  |
-  |default.driver|		org.apache.hive.jdbc.HiveDriver  |
-  |default.password|		- |
-  |default.url|		jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user  |
-  |default.user|		impala   |
-  |zeppelin.interpreter.localRepo|		/opt/zeppelin/local-repo/2D8U7GYP8  |
-  |zeppelin.interpreter.output.limit|		102400   |
-  |zeppelin.jdbc.auth.type|	KERBEROS |
-  |zeppelin.jdbc.concurrent.max_connection	|	10   |
-  |zeppelin.jdbc.concurrent.use|		true |
-  |zeppelin.jdbc.keytab.location|		-   |
-  |zeppelin.jdbc.principal|		-  |
+  | common.max_count |	1000  |
+  | default.driver |	org.apache.hive.jdbc.HiveDriver   |
+  | default.password |		- |
+  | default.url |		jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user  |
+  | default.user|		impala   |
+  | zeppelin.interpreter.localRepo|		/opt/zeppelin/local-repo/2D8U7GYP8  |
+  | zeppelin.interpreter.output.limit | 102400   |
+  | zeppelin.jdbc.auth.type |	KERBEROS |
+  | zeppelin.jdbc.concurrent.max_connection	|	10   |
+  | zeppelin.jdbc.concurrent.use |		true |
+  | zeppelin.jdbc.keytab.location |		-   |
+  | zeppelin.jdbc.principal |		-  |
 
   **Dependencies（示例）**
   
-  |artifact|	exclude  |
+  | artifact |	exclude  |
   | :--- | :--- |
-  |/opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar|	-    |
-  |/opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar	    |	-  |
-  |/opt/cloudera/parcels/CDH/jars/hadoop-common-2.6.0-cdh5.10.1.jar |	-     |
-  |/opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar	  |	-  |
-  |/opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar	 |	-    |
+  | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar|	-    |
+  | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar	    |	-  |
+  | /opt/cloudera/parcels/CDH/jars/hadoop-common-2.6.0-cdh5.10.1.jar |	-     |
+  | /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar	  |	-  |
+  | /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar	 |	-    |
 
  **测试方法**
 
@@ -223,30 +224,30 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
    
   5. Properties
   
-  |name|	value |
+  | name |	value |
 | :--- | :--- |                                                                                                                                        
-|SPARK_HOME	|	/opt/cloudera/parcels/SPARK2/lib/spark2  |
-|args|	-  |
-|master	|	yarn    |
-|spark.app.name	|	zeppelin|
-|spark.cores.max| |
-|spark.deployMode	|	client  |
-|spark.yarn.queue|	root.yarn_default |
-|zeppelin.R.cmd	|	R |
-|zeppelin.R.image.width	|	100%  |
-|zeppelin.R.knitr|	true |
-|zeppelin.R.render.options|	out.format = 'html', comment = NA, echo = FALSE, results = 'asis', message = F, warning = F|
-|zeppelin.dep.additionalRemoteRepository	|	spark-packages,http://dl.bintray.com/spark-packages/maven,false;                                       |
-|zeppelin.dep.localrepo	|	local-repo  |
-|zeppelin.interpreter.localRepo	|	/opt/zeppelin/local-repo/2DB7UNPCG |
-|zeppelin.interpreter.output.limit	|	102400  |
-|zeppelin.pyspark.python|	/opt/cloudera/parcels/SPARK2/bin/spark2-submit   |         
-|zeppelin.spark.concurrentSQL|    false |
-|zeppelin.spark.importImplicit	|    true |
-|zeppelin.spark.maxResult |    1000|
-|zeppelin.spark.printREPLOutput |    true  |
-|zeppelin.spark.sql.stacktrace	 |    false  |
-|zeppelin.spark.useHiveContext	 |    false |
+| SPARK_HOME	|	/opt/cloudera/parcels/SPARK2/lib/spark2  |
+| args |	-  |
+| master	|	yarn    |
+| spark.app.name	|	zeppelin| 
+| spark.cores.max | |
+| spark.deployMode	|	client  |
+| spark.yarn.queue |	root.yarn_default |
+| zeppelin.R.cmd	|	R |
+| zeppelin.R.image.width	|	100%  |
+| zeppelin.R.knitr|	true |
+| zeppelin.R.render.options |	out.format = 'html', comment = NA, echo = FALSE, results = 'asis', message = F, warning = F |
+| zeppelin.dep.additionalRemoteRepository	|	spark-packages,http://dl.bintray.com/spark-packages/maven,false;                                        |
+| zeppelin.dep.localrepo	|	local-repo  |
+| zeppelin.interpreter.localRepo	|	/opt/zeppelin/local-repo/2DB7UNPCG |
+| zeppelin.interpreter.output.limit	|	102400  |
+| zeppelin.pyspark.python|	/opt/cloudera/parcels/SPARK2/bin/spark2-submit   |         
+| zeppelin.spark.concurrentSQL|    false |
+| zeppelin.spark.importImplicit	|    true |
+| zeppelin.spark.maxResult |    1000|
+| zeppelin.spark.printREPLOutput |    true  |
+| zeppelin.spark.sql.stacktrace	 |    false  |
+| zeppelin.spark.useHiveContext	 |    false |
 
   6. 配置Notebook settings：
 
