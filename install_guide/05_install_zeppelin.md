@@ -93,29 +93,27 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
   * remove： Interpreter删除
   * 所有的interpreter 修改为Globally shared
   
-  
-  1. 配置Shell
+1. 配置Shell
   
   ![](/install_guide/fig/fig_05.png)
   
- 
-    **Properties（示例）**
+   **Properties（示例）**
 
-    | name	  |	 value|
-    | :--- | :--- | :--- |                  
-    | zeppelin.interpreter.localRepo  |   /opt/zeppelin/local-repo/2D81Y8APD |
-    | zeppelin.interpreter.output.limit | 102400 |
-    | zeppelin.python |	python |
-    | zeppelin.python.maxResult |   1000|
+   | name	  |	 value|
+   | :--- | :--- | :--- |                  
+   | zeppelin.interpreter.localRepo  |   /opt/zeppelin/local-repo/2D81Y8APD |
+   | zeppelin.interpreter.output.limit | 102400 |
+   | zeppelin.python |	python |
+   | zeppelin.python.maxResult |   1000|
 
-    **测试方法**
+   **测试方法**
     
-    ```
-    %sh
-    klist
-    ```
+   ```
+   %sh
+   klist
+   ```
         
-  2. 配置Python
+2. 配置Python
  
   **Properties（示例）**
   
@@ -136,7 +134,7 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
     print “this is test”
     ```
 
-  3. hive配置
+3. hive配置
   
   ![](/install_guide/fig/fig_07.png)
   
@@ -179,7 +177,7 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
     select count(*) from test1;
     ```
 
-  4. 配置Impala
+4. 配置Impala
   
   ![](/install_guide/fig/fig_08.png)
  
@@ -222,7 +220,7 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
 
   ![](/install_guide/fig/fig_09.png)
    
-  5. Properties
+5. Properties
   
   | name |	value |
 | :--- | :--- |                                                                                                                                        
@@ -249,7 +247,7 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
 | zeppelin.spark.sql.stacktrace	 |    false  |
 | zeppelin.spark.useHiveContext	 |    false |
 
-  6. 配置Notebook settings：
+6. 配置Notebook settings：
 
   通过点击“Notebook”配置按钮进行配置。将白色的“sh %sh”点击选择变成蓝色选中，点击双箭头按钮则表示重启该Interpreter。
 
