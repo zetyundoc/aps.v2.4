@@ -225,7 +225,7 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
    
   5. Properties
   
-|name|	value |
+  |name|	value |
 | :--- | :--- |                                                                                                                                        
 |SPARK_HOME	|	/opt/cloudera/parcels/SPARK2/lib/spark2  |
 |args|	-  |
@@ -252,8 +252,8 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
 
   6. 配置Notebook settings：
 
-通过点击“Notebook”进行配置。将白色的“sh %sh”点击选择变成蓝色选中，点击则表示重启该Interpreter。
+  通过点击“Notebook”进行配置。将白色的“sh %sh”点击选择变成蓝色选中，点击则表示重启该Interpreter。
 
-![](/install_guide/fig/fig_10.png)
+  ![](/install_guide/fig/fig_10.png)
  
 
