@@ -103,7 +103,8 @@
   ![](/install_guide/fig/fig_05.png)
   
    **Properties（示例）**
-
+   
+   
    | name | value|
    | :--- | :--- |                 
    | zeppelin.interpreter.localRepo  |   /opt/zeppelin/local-repo/2D81Y8APD |
@@ -123,7 +124,8 @@
   **Properties（示例）**
   
   ![](/install_guide/fig/fig_06.png)
-
+  
+  
    | name | value |
    | :--- | :--- |               
    | zeppelin.interpreter.localRepo(不添加)  |   opt/zeppelin/local-repo/2CYVZF7AQ |
@@ -145,6 +147,7 @@
   
   **Properties**
   
+  
    | name | value |
    | :--- | :--- |                
    | common.max_count |  1000|
@@ -163,6 +166,7 @@
 
   **Dependencies**
   
+    
    | artifact	  |	 exclude |
    | :--- | :--- |                
    | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar	|  |
@@ -229,7 +233,8 @@
   ![](/install_guide/fig/fig_09.png)
    
 5. Properties
-  
+ 
+ 
    | name |	value |
    | :--- | :--- |                                                                                                                                        
    | SPARK_HOME	|	/opt/cloudera/parcels/SPARK2/lib/spark2  |
