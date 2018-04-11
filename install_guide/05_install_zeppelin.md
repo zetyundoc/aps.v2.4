@@ -170,44 +170,61 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
     |/opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar|	|
     |/opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar |	 |
   
-
   **测试方法**
-%hive
-use aps;
-create table t1(id int);
-show tables;
-select count(*) from test1;
+  
+    ```
+    %hive
+    use aps;
+    create table t1(id int);
+    show tables;
+    select count(*) from test1;
+    ```
 
-4)	配置Impala
+  4. 配置Impala
+  
+  ![](/install_guide/fig/fig_08.png)
  
-	Properties
-name	value
-common.max_count	1000
-default.driver	org.apache.hive.jdbc.HiveDriver
-default.password	
-default.url	jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user
-default.user	impala
-zeppelin.interpreter.localRepo	/opt/zeppelin/local-repo/2D8U7GYP8
-zeppelin.interpreter.output.limit	102400
-zeppelin.jdbc.auth.type	KERBEROS
-zeppelin.jdbc.concurrent.max_connection	10
-zeppelin.jdbc.concurrent.use	true
-zeppelin.jdbc.keytab.location	
-zeppelin.jdbc.principal	
-	Dependencies（示例）
-artifact	exclude
-/opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar	
-/opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar	
-/opt/cloudera/parcels/CDH/jars/hadoop-common-2.6.0-cdh5.10.1.jar	
-/opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar	
-/opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar	
-	测试方法
-%impala
-show tables;
-select count(*) from test1;
-	配置spark2
+  **Properties**
+  
+  |name|		value |
+  | :--- | :--- |
+  |common.max_count|		1000  |
+  |default.driver|		org.apache.hive.jdbc.HiveDriver  |
+  |default.password|		- |
+  |default.url|		jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user  |
+  |default.user|		impala   |
+  |zeppelin.interpreter.localRepo|		/opt/zeppelin/local-repo/2D8U7GYP8  |
+  |zeppelin.interpreter.output.limit|		102400   |
+  |zeppelin.jdbc.auth.type|	KERBEROS |
+  |zeppelin.jdbc.concurrent.max_connection	|	10   |
+  |zeppelin.jdbc.concurrent.use|		true |
+  |zeppelin.jdbc.keytab.location|		-   |
+  |zeppelin.jdbc.principal|		-  |
+
+  **Dependencies（示例）**
+  
+  |artifact|	exclude  |
+  | :--- | :--- |
+  |/opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar|	-    |
+  |/opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar	    |	-  |
+  |/opt/cloudera/parcels/CDH/jars/hadoop-common-2.6.0-cdh5.10.1.jar |	-     |
+  |/opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar	  |	-  |
+  |/opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar	 |	-    |
+
+ **测试方法**
+
+     ```
+     %impala
+    show tables;
+    select count(*) from test1;
+    ```
+
+  **配置spark2**
+
+  ![](/install_guide/fig/fig_09.png)
    
-5)	Properties
+  5. Properties
+  
 name	value
 SPARK_HOME	/opt/cloudera/parcels/SPARK2/lib/spark2
 args	
@@ -232,7 +249,10 @@ zeppelin.spark.printREPLOutput	true
 zeppelin.spark.sql.stacktrace	false
 zeppelin.spark.useHiveContext	false
 
-6)	配置Notebook settings：
-通过点击“Notebook”- 进行配置。将白色的“sh %sh”点击选择变成蓝色选中，点击 则表示重启该Interpreter。
+  6. 配置Notebook settings：
+
+通过点击“Notebook”进行配置。将白色的“sh %sh”点击选择变成蓝色选中，点击则表示重启该Interpreter。
+
+![](/install_guide/fig/fig_10.png)
  
 
