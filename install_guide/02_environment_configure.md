@@ -99,10 +99,9 @@
   # ssh-copy-id 第三个节点IP
   # ssh-copy-id 第四个节点IP
 
-  # scp -r .ssh 第一个节点IP:~
-  # scp -r .ssh 第二个节点IP:~
-  # scp -r .ssh 第三个节点IP:~
-  # scp -r .ssh 第四个节点IP:~
+  # scp -r .ssh 第二个节点IP:~/
+  # scp -r .ssh 第三个节点IP:~/
+  # scp -r .ssh 第四个节点IP:~/
 
   ```
 
@@ -127,10 +126,9 @@
   # ssh-copy-id 第三个节点IP
   # ssh-copy-id 第四个节点IP
 
-  # scp -r .ssh 第一个节点IP:~
-  # scp -r .ssh 第二个节点IP:~
-  # scp -r .ssh 第三个节点IP:~
-  # scp -r .ssh 第四个节点IP:~
+  # scp -r .ssh 第二个节点IP:~/
+  # scp -r .ssh 第三个节点IP:~/
+  # scp -r .ssh 第四个节点IP:~/
 
   ```
 
