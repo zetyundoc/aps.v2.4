@@ -90,6 +90,7 @@
     * [BaggingClassSpy3](baggingclassspy3.md)
     * [ClasEvalSpy3](clasevalspy3.md)
     * [ExtratreesClassSPy3](extratreesclassspy3.md)
+    * [GradientboostingClassSpy3](gradientboostingclassspy3.md)
     * [Stacking](stacking.md)
     * [Xgboost::ensemble](xgboostensemble.md)
   * [FeatureSelection](featureselection.md)
