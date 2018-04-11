@@ -99,6 +99,13 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
  
     **Properties（示例）**
 
+|name	  |	 value
+	 |  用户属组 |	   创建节点     |
+| :--- | :--- | :--- | :--- |                       
+|aps	  |   123456 |	aps	     |   所有           |
+|apsapp   |	123456	 |   aps	 |       所有       |
+|zeppelin |	zeppelin |	zeppelin |   aps02  aps03   |
+
 name	value
 zeppelin.interpreter.localRepo	/opt/zeppelin/local-repo/2D81Y8APD
 zeppelin.interpreter.output.limit	102400
@@ -107,8 +114,12 @@ zeppelin.python.maxResult	1000
 
 
     **测试方法**
-%sh
-klist
+    
+    ```
+    %sh
+    klist
+    ```
+    
 2)	配置Python
  
 	Properties（示例）
