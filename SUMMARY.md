@@ -12,13 +12,6 @@
   * [系统配置](white_paper/system_configuration.md)
   * [经典案例](white_paper/classic_cases.md)
 
-## 管理员手册
-
-* [管理员手册](admin_guide.md)
-  * [快速入门](admin_guide/quick_start.md)
-  * [集群管理](admin_guide/cluster_management.md)
-  * [分析应用](admin_guide/analysis_app.md)
-  * [用户中心](admin_guide/user_center.md)
 
 ## 安装手册
 
@@ -29,6 +22,14 @@
   * [安装基础组件](install_guide/04_install_basic_components.md)
   * [安装Zeppelin](install_guide/05_install_zeppelin.md)
   * [验证APS基本功能](install_guide/06_verify_basic_functions.md)
+
+## 管理员手册
+
+* [管理员手册](admin_guide.md)
+  * [快速入门](admin_guide/quick_start.md)
+  * [集群管理](admin_guide/cluster_management.md)
+  * [分析应用](admin_guide/analysis_app.md)
+  * [用户中心](admin_guide/user_center.md)
 
 ## 用户手册
 
