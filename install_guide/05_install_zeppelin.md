@@ -183,20 +183,20 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
  
   **Properties**
   
-  | name |		value |
+  | name | value |
   | :--- | :--- |
   | common.max_count |	1000  |
   | default.driver |	org.apache.hive.jdbc.HiveDriver   |
   | default.password |		- |
-  | default.url |		jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user  |
-  | default.user|		impala   |
-  | zeppelin.interpreter.localRepo|		/opt/zeppelin/local-repo/2D8U7GYP8  |
+  | default.url | jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user  |
+  | default.user| impala   |
+  | zeppelin.interpreter.localRepo| /opt/zeppelin/local-repo/2D8U7GYP8  |
   | zeppelin.interpreter.output.limit | 102400   |
   | zeppelin.jdbc.auth.type |	KERBEROS |
   | zeppelin.jdbc.concurrent.max_connection	|	10   |
-  | zeppelin.jdbc.concurrent.use |		true |
-  | zeppelin.jdbc.keytab.location |		-   |
-  | zeppelin.jdbc.principal |		-  |
+  | zeppelin.jdbc.concurrent.use | true |
+  | zeppelin.jdbc.keytab.location | -   |
+  | zeppelin.jdbc.principal |	-  |
 
   **Dependencies（示例）**
   
