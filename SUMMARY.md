@@ -88,6 +88,7 @@
     * [AdaBoost](adaboost.md)
     * [AdaboostClassSPy3](adaboostclassspy3.md)
     * [BaggingClassSpy3](baggingclassspy3.md)
+    * [ClasEvalSpy3](clasevalspy3.md)
     * [Stacking](stacking.md)
     * [Xgboost::ensemble](xgboostensemble.md)
   * [FeatureSelection](featureselection.md)
