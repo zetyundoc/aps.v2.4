@@ -164,7 +164,7 @@
 | zeppelin.jdbc.keytab.location|	|
 | zeppelin.jdbc.principal	 |	|
 
-   **Dependencies**
+**Dependencies**
   
    
    | artifact	  |	 exclude |
