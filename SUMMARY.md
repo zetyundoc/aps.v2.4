@@ -20,6 +20,17 @@
   * [分析应用](admin_guide/analysis_app.md)
   * [用户中心](admin_guide/user_center.md)
 
+## 安装手册
+
+* [安装手册](an-zhuang-shou-ce/an-zhuang-shou-ce.md)
+  * [安装概览](install_guide/01_install_introduction.md)
+  * [配置基础环境](install_guide/02_environment_configure.md)
+  * [安装APS](install_guide/03_install_aps.md)
+  * [安装基础组件](install_guide/04_install_basic_components.md)
+  * [安装Zeppelin](install_guide/05_install_zeppelin.md)
+  * [验证APS基本功能](install_guide/06_verify_basic_functions.md)
+
+
 ## 用户手册
 
 * [用户手册](user_guide.md)
