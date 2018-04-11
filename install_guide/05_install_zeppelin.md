@@ -105,7 +105,7 @@
    **Properties（示例）**
 
    | name | value|
-   | :--- | :--- | :--- |                  
+   | :--- | :--- |                 
    | zeppelin.interpreter.localRepo  |   /opt/zeppelin/local-repo/2D81Y8APD |
    | zeppelin.interpreter.output.limit | 102400 |
    | zeppelin.python |	python |
@@ -125,7 +125,7 @@
   ![](/install_guide/fig/fig_06.png)
 
    | name | value |
-   | :--- | :--- | :--- |                  
+   | :--- | :--- |               
    | zeppelin.interpreter.localRepo(不添加)  |   opt/zeppelin/local-repo/2CYVZF7AQ |
    | zeppelin.interpreter.output.limit |	102400 |
    | zeppelin.python | python |
@@ -145,8 +145,8 @@
   
   **Properties**
   
-   | name	  |	 value |
-   | :--- | :--- | :--- |                  
+   | name | value |
+   | :--- | :--- |                
    | common.max_count |  1000|
    | default.driver |	org.apache.hive.jdbc.HiveDriver |
    | default.password |	python|
@@ -164,7 +164,7 @@
   **Dependencies**
   
    | artifact	  |	 exclude |
-   | :--- | :--- | :--- |                  
+   | :--- | :--- |                
    | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar	|  |
    | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar |  |
    | default.password | |
