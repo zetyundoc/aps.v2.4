@@ -51,7 +51,7 @@ APS基础功能包括用户管理、集群管理、分析应用管理，请参�
 
  ![](/install_guide/fig/fig_11.png)
 
-2. 在浏览器地址栏中输入" http://&lt;APS_IP&gt; "并按回车键，出现如下所示等登录界面，则说明APS安装成功。
+2. 在浏览器地址栏中输入" http://&lt;APS_IP> "并按回车键，出现如下所示等登录界面，则说明APS安装成功。
 
  ```
  登录用户：apsadmin@MCIPT.COM 密码：spdb@1234
