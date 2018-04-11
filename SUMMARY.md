@@ -22,7 +22,7 @@
 
 ## 安装手册
 
-* [安装手册](an-zhuang-shou-ce/an-zhuang-shou-ce.md)
+* [安装手册](install_guide.md)
   * [安装概览](install_guide/01_install_introduction.md)
   * [配置基础环境](install_guide/02_environment_configure.md)
   * [安装APS](install_guide/03_install_aps.md)
