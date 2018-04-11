@@ -225,29 +225,30 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
    
   5. Properties
   
-name	value
-SPARK_HOME	/opt/cloudera/parcels/SPARK2/lib/spark2
-args	
-master	yarn
-spark.app.name	zeppelin
-spark.cores.max	
-spark.deployMode	client
-spark.yarn.queue	root.yarn_default
-zeppelin.R.cmd	R
-zeppelin.R.image.width	100%
-zeppelin.R.knitr	true
-zeppelin.R.render.options	out.format = 'html', comment = NA, echo = FALSE, results = 'asis', message = F, warning = F
-zeppelin.dep.additionalRemoteRepository	spark-packages,http://dl.bintray.com/spark-packages/maven,false;
-zeppelin.dep.localrepo	local-repo
-zeppelin.interpreter.localRepo	/opt/zeppelin/local-repo/2DB7UNPCG
-zeppelin.interpreter.output.limit	102400
-zeppelin.pyspark.python	/opt/cloudera/parcels/SPARK2/bin/spark2-submit
-zeppelin.spark.concurrentSQL	false
-zeppelin.spark.importImplicit	true
-zeppelin.spark.maxResult	1000
-zeppelin.spark.printREPLOutput	true
-zeppelin.spark.sql.stacktrace	false
-zeppelin.spark.useHiveContext	false
+|name|	value |
+| :--- | :--- |                                                                                                                                        
+|SPARK_HOME	|	/opt/cloudera/parcels/SPARK2/lib/spark2  |
+|args|	-  |
+|master	|	yarn    |
+|spark.app.name	|	zeppelin|
+|spark.cores.max| |
+|spark.deployMode	|	client  |
+|spark.yarn.queue|	root.yarn_default |
+|zeppelin.R.cmd	|	R |
+|zeppelin.R.image.width	|	100%  |
+|zeppelin.R.knitr|	true |
+|zeppelin.R.render.options|	out.format = 'html', comment = NA, echo = FALSE, results = 'asis', message = F, warning = F|
+|zeppelin.dep.additionalRemoteRepository	|	spark-packages,http://dl.bintray.com/spark-packages/maven,false;                                       |
+|zeppelin.dep.localrepo	|	local-repo  |
+|zeppelin.interpreter.localRepo	|	/opt/zeppelin/local-repo/2DB7UNPCG |
+|zeppelin.interpreter.output.limit	|	102400  |
+|zeppelin.pyspark.python|	/opt/cloudera/parcels/SPARK2/bin/spark2-submit   |         
+|zeppelin.spark.concurrentSQL|    false |
+|zeppelin.spark.importImplicit	|    true |
+|zeppelin.spark.maxResult |    1000|
+|zeppelin.spark.printREPLOutput |    true  |
+|zeppelin.spark.sql.stacktrace	 |    false  |
+|zeppelin.spark.useHiveContext	 |    false |
 
   6. 配置Notebook settings：
 
