@@ -30,7 +30,6 @@
   * [安装Zeppelin](install_guide/05_install_zeppelin.md)
   * [验证APS基本功能](install_guide/06_verify_basic_functions.md)
 
-
 ## 用户手册
 
 * [用户手册](user_guide.md)
@@ -49,7 +48,6 @@
 ## 标准模型
 
 * [标准模型](biao-zhun-mo-xing/biao-zhun-mo-xing.md)
-  * [概述](biao-zhun-mo-xing/gai-shu.md)
   * [Customer\_churn](customerchurn.md)
     * [AdaBoost](adaboost.md)
     * [AsType](astype.md)
