@@ -221,11 +221,11 @@
     select count(*) from test1;
     ```
 
-   **配置spark2**
+5. 配置spark2
 
   ![](/install_guide/fig/fig_09.png)
    
-5. Properties
+   **Properties**
  
    | name |	value |
    | :--- | :--- |                                                                                                                                        
