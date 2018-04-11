@@ -33,9 +33,11 @@ su - aps -c "/home/aps/consul/consul-slave-start.sh"
 ```
 
 ##验证APS基础功能
+
 使用APS管理员账号登录APS并创建普通操作员账号，《DataCanvas APS 2.4 管理员手册》和《DataCanvas APS 2.4用户手册》。
+
 APS基础功能包括用户管理、集群管理、分析应用管理，请参考《DataCanvas APS 2.4管理员手册》和《DataCanvas APS 2.4用户手册》并按照如下步骤检查APS基本功能是否正常：
-1)	在浏览器地址栏中输入http://<APS01_IP>:8080/nagios输入账号密码进行登录，通过监控可查看到目前系统服务运行是否正常。
+1. 在浏览器地址栏中输入http://<APS01_IP>:8080/nagios输入账号密码进行登录，通过监控可查看到目前系统服务运行是否正常。
 登录用户：nagiosadmin 密码：nagios
  
 2)	在浏览器地址栏中输入“http://<APS_IP>”并按回车键，出现如下所示等登录界面，则说明APS安装成功。
