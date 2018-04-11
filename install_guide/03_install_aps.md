@@ -8,6 +8,7 @@ APS的安装包括基础组件以及APS私有组件的安装。在安装过程�
 在安装前，请确保APS中的主机满足如下条件：
 
 1. 已完成各主机的基础环境配置，具体配置步骤请参考“配置基础环境”章节。
+
 2. 已获取APS安装包。
 
 ## Repo配置
@@ -203,12 +204,12 @@ vi /etc/fatab
     ```
     * 配置CDH hosts
    
-    将cdh hosts地址按照示例模板格式进行填写，集群信息由CDH管理员提供
-    ```
-    cdh_cluster:
+      将cdh hosts地址按照示例模板格式进行填写，集群信息由CDH管理员提供
+      ```
+      cdh_cluster:
     - {ip: 'cdh节点1IP' , domain: 'cdh1.test.com' , hostname: 'cdh1'}
     - {ip: 'cdh节点2IP ' , domain: 'cdh2.test.com' , hostname: 'cdh2'}
-    ```	
+      ```	
     * 执行安装脚本。
     ```
      vim /home/aps/aps-deploy/bin/aps.sh
@@ -219,7 +220,7 @@ vi /etc/fatab
 
         
    备注：
-
+    
     1. 如果安装失败继续执行，需要删除/tmp下的安装日志/tmp/aps_installation_failure_exit_code，并把aps.sh脚本里的最后边，注释掉已经安装成功的组件，如下图所示：
     
     ![](fig/fig_03.png)
