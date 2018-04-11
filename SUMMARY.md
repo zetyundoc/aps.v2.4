@@ -86,6 +86,7 @@
     * [VariableSelection](variableselection.md)
   * [Ensemble](ensemble.md)
     * [AdaBoost](adaboost.md)
+    * [AdaboostClassSPy3](adaboostclassspy3.md)
     * [Stacking](stacking.md)
     * [Xgboost::ensemble](xgboostensemble.md)
   * [FeatureSelection](featureselection.md)
