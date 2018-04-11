@@ -54,9 +54,9 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
  
     * 检查aps02和aps03节点的/opt/zeppelin/ 都属于zeppelin用户除了bin下面的delete_user_util.sh 和 removeInterpreter.sh为root用户,若不是则
 
-    ```
-    chown -R zeppelin:zeppelin /opt/zeppelin/XXX
-    ```
+      ```
+      chown -R zeppelin:zeppelin /opt/zeppelin/XXX
+      ```
     
     * 检查/mnt/nfsfile/log/ 下面的zeppelin目录权限属于775 和 zeppelin用户,若不是则
 
