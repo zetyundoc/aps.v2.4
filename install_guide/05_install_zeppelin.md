@@ -9,6 +9,7 @@
 请参照如下步骤安装Zeppelin组件，以下步骤在主备都需要执行。
 
 1. 基础配置(在aps02上执行)
+
     ```
    zeppelin的日志和配置目录修改 新建/mnt/nfsfile/log/zeppelin目录
    sudo su - root
@@ -17,17 +18,21 @@
    chmod 755 /mnt/nfsfile/zeppelin/conf
    chown -R zeppelin:zeppelin /mnt/nfsfile/zeppelin
    chmod 777 -R /mnt/nfsfile/log/
-   ```
+    ```
  
 2. 备份
- ```
-sudo su - root
-cp -r /mnt/nfsfile/zeppelin/conf  /mnt/nfsfile/zeppelin/confbak
- ```
+
+    ```
+    sudo su - root
+    cp -r /mnt/nfsfile/zeppelin/conf  /mnt/nfsfile/zeppelin/confbak
+    ```
+    
 3. 修改配置文件（aps02，aps03主备）
- ```
-su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CONF_DIR="/mnt/nfsfile/zeppelin/conf" export ZEPPELIN_LOG_DIR="/mnt/nfsfile/log/zeppelin"
- ```
+
+   ```
+   su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CONF_DIR="/mnt/nfsfile/zeppelin/conf" export  ZEPPELIN_LOG_DIR="/mnt/nfsfile/log/zeppelin"
+  ```
+ 
 4. 修改shrio.ini （aps02，aps03主备）
  
     文件路径
@@ -100,6 +105,7 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
    **Properties（示例）**
 
    | name	  |	 value|
+   
    | :--- | :--- | :--- |                  
    | zeppelin.interpreter.localRepo  |   /opt/zeppelin/local-repo/2D81Y8APD |
    | zeppelin.interpreter.output.limit | 102400 |
@@ -118,7 +124,7 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
   **Properties（示例）**
   
   ![](/install_guide/fig/fig_06.png)
-  
+
    | name	  |	 value |
    | :--- | :--- | :--- |                  
    | zeppelin.interpreter.localRepo(不添加)  |   opt/zeppelin/local-repo/2CYVZF7AQ |
@@ -158,14 +164,14 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
 
   **Dependencies**
   
-    | artifact	  |	 exclude |
-    | :--- | :--- | :--- |                  
-    | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar	|  |
-    | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar |  |
-    | default.password | |
-    | /opt/cloudera/parcels/CDH/jars/hadoop-common-2.6.0-cdh5.10.1.jar | |
-    | /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar |	|
-    | /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar |	 |
+   | artifact	  |	 exclude |
+   | :--- | :--- | :--- |                  
+   | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar	|  |
+   | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar |  |
+   | default.password | |
+   | /opt/cloudera/parcels/CDH/jars/hadoop-common-2.6.0-cdh5.10.1.jar | |
+   | /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar |	|
+   | /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar |	 |
   
   **测试方法**
   
@@ -245,7 +251,7 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
    | zeppelin.spark.maxResult |    1000|
    | zeppelin.spark.printREPLOutput |    true  |
    | zeppelin.spark.sql.stacktrace	 |    false  |
-  | zeppelin.spark.useHiveContext	 |    false |
+   | zeppelin.spark.useHiveContext	 |    false |
 
 6. 配置Notebook settings：
 
