@@ -1,10 +1,10 @@
 #  Zeppelin
 
-##安装说明
+## 安装说明
 
 根据安装规划只需要在aps02和aps03两台服务器上执行本节的步骤进行Zeppelin安装。但在系统运行时只需要启动一个Zeppelin服务即可，仅当启动的Zeppelin服务发生不可用时，才需要启动另一个Zeppelin服务。
 
-##安装及配置Zeppelin
+## 安装及配置Zeppelin
 
 1. 安装Zeppelin组件（主备都需要执行）
 
