@@ -36,7 +36,7 @@ tar zxvf pypi.tar.gz  -d  /data/repo/
 
 只需要在APS集群的主节点APS03上安装配置nfs磁盘。
 
-### 安装过程
+### 安装APS软件包
 ```
 mkdir -p /mnt/data
 sudo mkfs -t ext4 [nfs磁盘]   #[nfs磁盘]格式化为ext4格式
