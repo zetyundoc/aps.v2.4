@@ -203,7 +203,7 @@ vi /etc/fatab
     ```
     * 配置CDH hosts
    
-   将cdh hosts地址按照示例模板格式进行填写，集群信息由CDH管理员提供
+    将cdh hosts地址按照示例模板格式进行填写，集群信息由CDH管理员提供
     ```
     cdh_cluster:
     - {ip: 'cdh节点1IP' , domain: 'cdh1.test.com' , hostname: 'cdh1'}
