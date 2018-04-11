@@ -120,11 +120,11 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
   ![](/install_guide/fig/fig_06.png)
   
    | name	  |	 value |
-    | :--- | :--- | :--- |                  
-    | zeppelin.interpreter.localRepo(不添加)  |   opt/zeppelin/local-repo/2CYVZF7AQ |
-    | zeppelin.interpreter.output.limit |	102400 |
-    | zeppelin.python | python |
-    | zeppelin.python.maxResult |   1000|
+   | :--- | :--- | :--- |                  
+   | zeppelin.interpreter.localRepo(不添加)  |   opt/zeppelin/local-repo/2CYVZF7AQ |
+   | zeppelin.interpreter.output.limit |	102400 |
+   | zeppelin.python | python |
+   | zeppelin.python.maxResult |   1000|
 
     **测试方法：**
     
@@ -141,20 +141,20 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
   **Properties**
   
    | name	  |	 value |
-    | :--- | :--- | :--- |                  
-    | common.max_count |  1000|
-    | default.driver |	org.apache.hive.jdbc.HiveDriver |
-    | default.password |	python|
-    | default.url（根据实际cdh集群进行配置） | jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user |
-    | default.user|	hive |
-    | zeppelin.interpreter.localRepo（不添加） | python |
-    | zeppelin.python.maxResult |  /opt/zeppelin/local-repo/2DAADHRKQ|
-    | zeppelin.interpreter.output.limit |  102400|
-    | zeppelin.jdbc.auth.type	 | KERBEROS|
-    | zeppelin.jdbc.concurrent.max_connection |	10|
-    | zeppelin.jdbc.concurrent.use | true |
-    | zeppelin.jdbc.keytab.location|	|
-    | zeppelin.jdbc.principal	 |	|
+   | :--- | :--- | :--- |                  
+   | common.max_count |  1000|
+   | default.driver |	org.apache.hive.jdbc.HiveDriver |
+   | default.password |	python|
+   | default.url（根据实际cdh集群进行配置） | jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user |
+   | default.user|	hive |
+   | zeppelin.interpreter.localRepo（不添加） | python |
+   | zeppelin.python.maxResult |  /opt/zeppelin/local-repo/2DAADHRKQ|
+   | zeppelin.interpreter.output.limit |  102400|
+   | zeppelin.jdbc.auth.type	 | KERBEROS|
+   | zeppelin.jdbc.concurrent.max_connection |	10|
+   | zeppelin.jdbc.concurrent.use | true |
+   | zeppelin.jdbc.keytab.location|	|
+   | zeppelin.jdbc.principal	 |	|
 
   **Dependencies**
   
