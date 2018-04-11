@@ -140,7 +140,7 @@ su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CO
   
   **Properties**
   
-    | name	  |	 value |
+   | name	  |	 value |
     | :--- | :--- | :--- |                  
     | common.max_count |  1000|
     | default.driver |	org.apache.hive.jdbc.HiveDriver |
