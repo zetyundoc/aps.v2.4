@@ -144,7 +144,8 @@
   ![](/install_guide/fig/fig_07.png)
   
    **Properties**
-  
+   
+   
    | name | value |
    | :--- | :--- |                
    | common.max_count |  1000|
