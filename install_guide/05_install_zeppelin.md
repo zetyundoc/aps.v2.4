@@ -83,7 +83,7 @@
 
 使用AD需要配置模拟用户，不使用AD不是用模拟用户
 
-在浏览器中访问http://aps01，登录，“服务-用户中心-安全中心-获取”。
+在浏览器中访问“http://aps01”， 登录，“服务-用户中心-安全中心-获取”。
 
 单击“服务-分析应用-自助分析”，右上角login，并使用管理员账号登录，点击用户名，在下拉菜单中选择“Interpreter”，配置各Interpreter如下所示。
 
@@ -104,8 +104,7 @@
   
    **Properties（示例）**
 
-   | name	  |	 value|
-   
+   | name | value|
    | :--- | :--- | :--- |                  
    | zeppelin.interpreter.localRepo  |   /opt/zeppelin/local-repo/2D81Y8APD |
    | zeppelin.interpreter.output.limit | 102400 |
@@ -125,7 +124,7 @@
   
   ![](/install_guide/fig/fig_06.png)
 
-   | name	  |	 value |
+   | name | value |
    | :--- | :--- | :--- |                  
    | zeppelin.interpreter.localRepo(不添加)  |   opt/zeppelin/local-repo/2CYVZF7AQ |
    | zeppelin.interpreter.output.limit |	102400 |
