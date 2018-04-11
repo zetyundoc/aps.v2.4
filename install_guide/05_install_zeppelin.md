@@ -98,7 +98,7 @@
   * remove： Interpreter删除
   * 所有的interpreter 修改为Globally shared
   
-1. 配置Shell
+#### 配置Shell
   
   ![](/install_guide/fig/fig_05.png)
   
@@ -119,18 +119,19 @@
    klist
    ```
         
-2. 配置Python
+#### 配置Python
  
-   **Properties（示例）**
+**Properties（示例）**
   
-   ![](/install_guide/fig/fig_06.png)
+![](/install_guide/fig/fig_06.png)
 
-   | name | value |
-   | :--- | :--- |               
-   | zeppelin.interpreter.localRepo(不添加)  |   opt/zeppelin/local-repo/2CYVZF7AQ |
-   | zeppelin.interpreter.output.limit |	102400 |
-   | zeppelin.python | python |
-   | zeppelin.python.maxResult |   1000|
+
+| name | value |
+| :--- | :--- |               
+| zeppelin.interpreter.localRepo(不添加)  |   opt/zeppelin/local-repo/2CYVZF7AQ |
+| zeppelin.interpreter.output.limit |	102400 |
+| zeppelin.python | python |
+| zeppelin.python.maxResult |   1000|
 
    **测试方法：**
     
@@ -140,28 +141,28 @@
     print “this is test”
     ```
 
-3. hive配置
+#### hive配置
   
-  ![](/install_guide/fig/fig_07.png)
+![](/install_guide/fig/fig_07.png)
   
-   **Properties**
+**Properties**
+ 
    
-   
-   | name | value |
-   | :--- | :--- |                
-   | common.max_count |  1000|
-   | default.driver |	org.apache.hive.jdbc.HiveDriver |
-   | default.password |	python|
-   | default.url（根据实际cdh集群进行配置） | jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user |
-   | default.user|	hive |
-   | zeppelin.interpreter.localRepo（不添加） | python |
-   | zeppelin.python.maxResult |  /opt/zeppelin/local-repo/2DAADHRKQ|
-   | zeppelin.interpreter.output.limit |  102400|
-   | zeppelin.jdbc.auth.type	 | KERBEROS|
-   | zeppelin.jdbc.concurrent.max_connection |	10|
-   | zeppelin.jdbc.concurrent.use | true |
-   | zeppelin.jdbc.keytab.location|	|
-   | zeppelin.jdbc.principal	 |	|
+| name | value |
+| :--- | :--- |                
+| common.max_count |  1000|
+| default.driver |	org.apache.hive.jdbc.HiveDriver |
+| default.password |	python|
+| default.url（根据实际cdh集群进行配置） | jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user |
+| default.user|	hive |
+| zeppelin.interpreter.localRepo（不添加） | python |
+| zeppelin.python.maxResult |  /opt/zeppelin/local-repo/2DAADHRKQ|
+| zeppelin.interpreter.output.limit |  102400|
+| zeppelin.jdbc.auth.type	 | KERBEROS|
+| zeppelin.jdbc.concurrent.max_connection |	10|
+| zeppelin.jdbc.concurrent.use | true |
+| zeppelin.jdbc.keytab.location|	|
+| zeppelin.jdbc.principal	 |	|
 
    **Dependencies**
   
@@ -185,7 +186,7 @@
     select count(*) from test1;
     ```
 
-4. 配置Impala
+#### 配置Impala
   
   ![](/install_guide/fig/fig_08.png)
  
@@ -226,7 +227,7 @@
     select count(*) from test1;
     ```
 
-5. 配置spark2
+#### 配置spark2
 
   ![](/install_guide/fig/fig_09.png)
    
