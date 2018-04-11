@@ -133,15 +133,15 @@
 | zeppelin.python | python |
 | zeppelin.python.maxResult |   1000|
 
-   **测试方法：**
+**测试方法：**
     
-    ```
+ ```
     %python
     import os
     print “this is test”
-    ```
+ ```
 
-#### hive配置
+#### 配置Hive
   
 ![](/install_guide/fig/fig_07.png)
   
@@ -176,7 +176,7 @@
    | /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar |	|
    | /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar |	 |
   
-   **测试方法**
+**测试方法**
   
     ```
     %hive
@@ -188,9 +188,9 @@
 
 #### 配置Impala
   
-  ![](/install_guide/fig/fig_08.png)
+![](/install_guide/fig/fig_08.png)
  
-  **Properties**
+**Properties**
    
    
    | name | value |
@@ -208,7 +208,7 @@
    | zeppelin.jdbc.keytab.location | -   |
    | zeppelin.jdbc.principal |	-  |
 
-   **Dependencies（示例）**
+**Dependencies（示例）**
    
    
    | artifact |	exclude  |
@@ -219,7 +219,7 @@
    | /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar	  |	-  |
    | /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar	 |	-    |
 
-   **测试方法**
+**测试方法**
 
      ```
      %impala
@@ -229,9 +229,9 @@
 
 #### 配置spark2
 
-  ![](/install_guide/fig/fig_09.png)
+![](/install_guide/fig/fig_09.png)
    
-   **Properties**
+**Properties**
    
    
    | name |	value |
@@ -259,9 +259,9 @@
    | zeppelin.spark.sql.stacktrace	 |    false  |
    | zeppelin.spark.useHiveContext	 |    false |
 
-6. 配置Notebook settings：
+#### 配置Notebook settings：
 
-  通过点击“Notebook”配置按钮进行配置。将白色的“sh %sh”点击选择变成蓝色选中，点击双箭头按钮则表示重启该Interpreter。
+通过点击“Notebook”配置按钮进行配置。将白色的“sh %sh”点击选择变成蓝色选中，点击双箭头按钮则表示重启该Interpreter。
 
   ![](/install_guide/fig/fig_10.png)
  
