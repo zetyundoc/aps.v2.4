@@ -195,20 +195,21 @@ vi /etc/fstab
        'cpus(heron):2;cpus(controller):6;mem(heron):8000;mem(controller):24000;disk(heron):366843;disk(controller):550264'
     ```
 
-    * 配置dasserver配置项（该项内容向CDH管理员申请）
+   * 配置dasserver配置项（该项内容向CDH管理员申请）
     ```
     hdfs_host: hdfs访问ip
     livy_host: livy访问ip
     das_ad_user: zetyun@TEST.com
     das_ad_pass: 123456
     ```
-    * 配置CDH hosts
+   * 配置CDH hosts
    
-      将cdh hosts地址按照示例模板格式进行填写，集群信息由CDH管理员提供
+      将cdh hosts地址按照示例模板格式进行填写，集群信息由CDH管理员提供。
+      
       ```
       cdh_cluster:
-    - {ip: 'cdh节点1IP' , domain: 'cdh1.test.com' , hostname: 'cdh1'}
-    - {ip: 'cdh节点2IP ' , domain: 'cdh2.test.com' , hostname: 'cdh2'}
+      - {ip: 'cdh节点1IP' , domain: 'cdh1.test.com' , hostname: 'cdh1'}
+      - {ip: 'cdh节点2IP ' , domain: 'cdh2.test.com' , hostname: 'cdh2'}
       ```	
 
 6.执行安装脚本。
@@ -218,10 +219,10 @@ vi /etc/fstab
      $ cd /home/aps/aps-deploy/bin
      $ ./aps.sh -m all
     ```
-    该脚本会完成系统检查以及各基础组件的安装。
 
+   该脚本会完成系统检查以及各基础组件的安装。
 
-备注：
+   备注：
     
    1. 如果安装失败继续执行，需要删除/tmp下的安装日志/tmp/aps_installation_failure_exit_code，并把aps.sh脚本里的最后边，注释掉已经安装成功的组件，如下图所示：
    
@@ -254,6 +255,30 @@ vi /etc/fstab
    到除节点一之外的节点上，分别执行脚本/usr/local/aps/tmp/devicemapper.sh，然后在节点一注释掉如上图部分内容，之后继续执行./aps.sh -m all;
 
    3. 以上aps.sh执行成功后，aps用户在节点一上执行jps查看Controller,Scheduler,HeronServer,das,mpserver.jar,UserCenter,SpecsServer,FalconServer是否启动，使用docker ps 查看pipes,compass 是否启动。使用root用户在节点二上执行jps查看keytabserver是否启动成功。(执行jps，如果显示command not found。执行source /etc/profile。再次执行jps验证。)
+
+## 修改启动参数
+
+安装完APS后需要修改Apollo动态配置参数，修改项如下所示：
+
+```
+apollo -> pipes -> modelOnLine.nginx.ssh.password:123456
+[密码为marathon节点，默认为第四个节点的aps密码]
+```
+## 启动KeytabServer
+
+```
+# ssh aps02 
+# cd /mnt/nfsfile/apsservice/keytabserver
+# sh run.sh start
+
+```
+
+
+
+
+
+
+
 
 
 
