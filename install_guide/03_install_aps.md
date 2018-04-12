@@ -27,8 +27,8 @@ APS的安装包括基础组件以及APS私有组件的安装。在安装过程�
 mkdir -p /data/repo/
 sudo mkfs -t ext4 [repo磁盘]  #[repo磁盘]格式化为ext4格式
 mount [repo磁盘] /data/repo/
-tar zxvf CRAN.tar.gz  -d /data/repo/
-tar zxvf pypi.tar.gz  -d  /data/repo/
+tar zxvf CRAN.tar  -C /data/repo/
+tar zxvf pypi.tar  -C  /data/repo/
 ```
 
 ## Nfs配置
