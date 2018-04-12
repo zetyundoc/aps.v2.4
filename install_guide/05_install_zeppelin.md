@@ -93,7 +93,7 @@
 
 **参数说明**
 
-  * edit：对Interpreter进行修改。
+  * edit：对Interpreter进行修改
   * restart：Interpreter重启
   * remove： Interpreter删除
   * 所有的interpreter 修改为Globally shared
