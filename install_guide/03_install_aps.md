@@ -210,7 +210,9 @@ vi /etc/fstab
     - {ip: 'cdh节点1IP' , domain: 'cdh1.test.com' , hostname: 'cdh1'}
     - {ip: 'cdh节点2IP ' , domain: 'cdh2.test.com' , hostname: 'cdh2'}
       ```	
-    * 执行安装脚本。
+
+6.执行安装脚本。
+  
     ```
      vim /home/aps/aps-deploy/bin/aps.sh
      $ cd /home/aps/aps-deploy/bin
@@ -218,8 +220,8 @@ vi /etc/fstab
     ```
     该脚本会完成系统检查以及各基础组件的安装。
 
-        
-   备注：
+
+备注：
     
    1. 如果安装失败继续执行，需要删除/tmp下的安装日志/tmp/aps_installation_failure_exit_code，并把aps.sh脚本里的最后边，注释掉已经安装成功的组件，如下图所示：
    
