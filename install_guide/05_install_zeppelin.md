@@ -55,18 +55,18 @@
     
 5. 检查Zeppelin配置文件及启动服务
  
-    * 检查aps02和aps03节点的/opt/zeppelin/ 都属于zeppelin用户除了bin下面的delete_user_util.sh 和 removeInterpreter.sh为root用户,若不是则
+   1. 检查aps02和aps03节点的/opt/zeppelin/ 都属于zeppelin用户除了bin下面的delete_user_util.sh 和 removeInterpreter.sh为root用户,若不是则
 
       ```
       chown -R zeppelin:zeppelin /opt/zeppelin/XXX
       ```
     
-    * 检查/mnt/nfsfile/log/ 下面的zeppelin目录权限属于775 和 zeppelin用户,若不是则
+   2. 检查/mnt/nfsfile/log/ 下面的zeppelin目录权限属于775 和 zeppelin用户,若不是则
 
       ```
       chown -R zeppelin:zeppelin /mnt/nfsfile/log/zeppelin
       ```
-    * 检查/mnt/nfsfile/zeppelin/下的conf 和notebook 权限属于755 和 zeppelin,若不是则
+   3. 检查/mnt/nfsfile/zeppelin/下的conf 和notebook 权限属于755 和 zeppelin,若不是则
     
       ```
       chown -R zeppelin:zeppelin /mnt/nfsfile/zeppelin/
