@@ -35,7 +35,7 @@ APS组件结构图如下所示：
 | keepalived |	1.3.5-1.el7 |
 | Nagios |	4.3.4 |
 
-说明:APS组件是指compass, pipes、dasserver,heron等私有组件。
+说明:APS组件是指compass、pipes、dasserver、heron等私有组件。
 
 ### 安装规划
 
@@ -85,7 +85,7 @@ APS组件结构图如下所示：
 |安装包名称	|说明|
 | :--- | :--- |
 |aps-deploy-*tgz	|APS安装包，包括基础组件以及APS私有组件的安装程序包以及安装脚本。|
-|CRAN.tar	|R的repo源|
-|pypi.tar	|python的repo源|
+|CRAN.tar	|R的repo源。|
+|pypi.tar	|python的repo源。|
 
 说明:安装包名称中的*表示软件版本号，请以实际情况为准。
