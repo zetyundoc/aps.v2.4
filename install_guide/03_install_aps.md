@@ -213,12 +213,12 @@ vi /etc/fstab
       ```	
 
 6.执行安装脚本。
-  
+
    ```
-     vim /home/aps/aps-deploy/bin/aps.sh
-     $ cd /home/aps/aps-deploy/bin
-     $ ./aps.sh -m all
-   ```
+   vim /home/aps/aps-deploy/bin/aps.sh
+   $ cd /home/aps/aps-deploy/bin
+   $ ./aps.sh -m all
+  ```
 
    该脚本会完成系统检查以及各基础组件的安装。
 
