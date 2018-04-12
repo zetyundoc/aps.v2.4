@@ -30,15 +30,14 @@ APS需要访问CDH获取集群资源，因此需要将CDH集群中各组件的�
 
 2. 配置环境变量。
 
-  * 在APS所有主机节点配置Hadoop环境变量。
-
+  1. 在APS所有主机节点配置Hadoop环境变量。
    ```
    echo "export HADOOP_HOME=/opt/cloudera/parcels/CDH/lib/hadoop" >> /etc/profile  
    echo "export PATH=\$PATH:\$HADOOP_HOME/bin" >> /etc/profile
    source /etc/profile 
    ```
-
-   * 创建软连接。
+   
+   2. 创建软连接。
    ```
    ln -s /opt/cloudera/parcels/CDH/bin/hdfs /usr/bin/hdfs
    ln -s /opt/cloudera/parcels/CDH/bin/hive /usr/bin/hive
