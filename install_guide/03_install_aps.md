@@ -15,12 +15,12 @@ APS的安装包括基础组件以及APS私有组件的安装。在安装过程�
 
 ### 安装说明
 
-只需要在APS集群的主节点APS01上安装Repo仓库即可。
+只需要在APS集群的主节点APS01上安装Repo仓库即可，镜像源包单独提供。
 
 安装Repo仓库使用的安装包列表如下所示：
 
-* R镜像源：CRAN.tar.gz
-* Python镜像源：pypi.tar.gz 
+* R镜像源：CRAN.tar
+* Python镜像源：pypi.tar 
 
 ### 安装过程
 ```
@@ -43,7 +43,7 @@ mkdir -p /mnt/data
 sudo mkfs -t ext4 [nfs磁盘]   #[nfs磁盘]格式化为ext4格式
 mount [nfs磁盘] /mnt/data 
 添加开机自动挂载磁盘
-vi /etc/fatab
+vi /etc/fstab
 [nfs磁盘]  /mnt/data  ext4   defaults   0   0
 ```
 ## 安装过程
