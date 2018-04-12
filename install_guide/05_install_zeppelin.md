@@ -8,7 +8,7 @@
 
 请参照如下步骤安装Zeppelin组件，以下步骤在主备都需要执行。
 
-1. 基础配置(在aps02上执行)
+1. 在aps02上执行如下命令完成基础配置。
 
     ```
    zeppelin的日志和配置目录修改 新建/mnt/nfsfile/log/zeppelin目录
@@ -20,20 +20,20 @@
    chmod 777 -R /mnt/nfsfile/log/
     ```
  
-2. 备份
+2. 备份配置文件。
 
     ```
     sudo su - root
     cp -r /mnt/nfsfile/zeppelin/conf  /mnt/nfsfile/zeppelin/confbak
     ```
     
-3. 修改配置文件（aps02，aps03主备）
+3. 在aps02，aps03主备上修改配置文件。
 
    ```
    su - zeppelin  密码 zeppelin vi /opt/zeppelin/bin/common.sh export ZEPPELIN_CONF_DIR="/mnt/nfsfile/zeppelin/conf" export  ZEPPELIN_LOG_DIR="/mnt/nfsfile/log/zeppelin"
   ```
  
-4. 修改shrio.ini （aps02，aps03主备）
+4. 在aps02，aps03主备上修改shrio.ini。
  
     文件路径
  
@@ -53,25 +53,25 @@
     cp shrio.ini.NOAD shrio.ini
     ```
     
-5. 检查Zeppelin配置文件及启动服务
+5. 检查Zeppelin配置文件及启动服务。
  
-   1. 检查aps02和aps03节点的/opt/zeppelin/ 都属于zeppelin用户除了bin下面的delete_user_util.sh 和 removeInterpreter.sh为root用户,若不是则
+   1. 检查aps02和aps03节点的/opt/zeppelin/下的文件属主，除了bin下面的delete_user_util.sh 和 removeInterpreter.sh为root为用户，其它是否都属于zeppelin用户，若不是则可执行如下命令修改相应文件的属主：
 
       ```
       chown -R zeppelin:zeppelin /opt/zeppelin/XXX
       ```
     
-   2. 检查/mnt/nfsfile/log/ 下面的zeppelin目录权限属于775 和 zeppelin用户,若不是则
+   2. 检查/mnt/nfsfile/log/ 下面的zeppelin目录权限是否为775以及属主是否为zeppelin用户,若不是请参考如下命令进行修改：
 
       ```
       chown -R zeppelin:zeppelin /mnt/nfsfile/log/zeppelin
       ```
-   3. 检查/mnt/nfsfile/zeppelin/下的conf 和notebook 权限属于755 和 zeppelin,若不是则
+   3. 检查/mnt/nfsfile/zeppelin/下的conf和notebook权限是否为755以及属主是否为zeppelin,若不是请参考如下命令进行修改：
     
       ```
       chown -R zeppelin:zeppelin /mnt/nfsfile/zeppelin/
       ```
-6. 进入aps02节点，用zeppelin用户启动命令
+6. 进入aps02节点，用zeppelin用户执行如下命令启动Zeppelin。
 
    ```
     #su - zeppelin
@@ -81,7 +81,7 @@
     
 ### 配置Zeppelin的Interpreter
 
-使用AD需要配置模拟用户，不使用AD不是用模拟用户
+使用AD需要配置模拟用户，不使用AD不使用模拟用户。
 
 在浏览器中访问“http://aps01”， 登录，“服务-用户中心-安全中心-获取”。
 
