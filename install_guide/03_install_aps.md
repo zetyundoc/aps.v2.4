@@ -147,7 +147,7 @@ vi /etc/fstab
 
    该配置文件用于配置相关组件的工作目录、IP地址等运行环境信息，其中大部分参数保留默认值即可，只需要关注并修改如下参数（参考示例，仅用于测试环境）：
  
- 1. 配置docker存储所需磁盘（每个节点磁盘规划统一的情况下配置）
+ 1. 配置docker存储所需磁盘（每个节点磁盘规划统一的情况下配置）。
   
     ```
     docker_disk_file: [docker磁盘]   #配置每个节点统一提供的docker存储盘
@@ -155,26 +155,26 @@ vi /etc/fstab
     docker_disk_file: /dev/sdc
     ```
    
-   2. 配置NFS
+   2. 配置NFS。
    
     ```
     nfs_share_dir: /mnt/nfsdata
     nfs_share_subnet: 当前网段的子网掩码/24
     ```
    
-   3. 配置Zookeeper集群参数，默认即可
+   3. 配置Zookeeper集群参数，默认即可。
 
      ```
      zookeeper_quorum: 1
      ```
 
-  4. 配置keepalived网卡名称及VIP地址（需要ifconfig查看网卡信息进行配置）
+  4. 配置keepalived网卡名称及VIP地址（需要ifconfig查看网卡信息进行配置）。
     ```
     # keepalived
     vrrp_interface: ens192
     postgresql_vip: postgresql的虚拟ip（向网管理申请）
     ```
-  5. 配置krb5信息
+  5. 配置krb5信息。
     ```
     # krb5
     krb5_default_realm: TEST.COM (向AD管理员申请)
@@ -182,27 +182,27 @@ vi /etc/fstab
     krb5_domain_realm: ['.zetyun.com','zetyun.com']
     ```
 
-  6. 配置zeppelin相关的AD
+  6. 配置zeppelin相关的AD。
     ```
     # zeppelin
     shiro_searchBase: 'OU=f,DC=TEST,DC=COM'
     shiro_groupRolesMap: '"CN=apsadmin,OU=f_inc2,DC=TEST,DC=COM":"admin"'
     ```
-  7. 配置Mesos资源分配（建议按1:3比例分配）
+  7. 配置Mesos资源分配（建议按1:3比例分配）。
      ```
     # mesos
     mesos_resources:
        'cpus(heron):2;cpus(controller):6;mem(heron):8000;mem(controller):24000;disk(heron):366843;disk(controller):550264'
     ```
 
-   8. 配置dasserver配置项（该项内容向CDH管理员申请）
+   8. 配置dasserver配置项（该项内容向CDH管理员申请）。
     ```
     hdfs_host: hdfs访问ip
     livy_host: livy访问ip
     das_ad_user: zetyun@TEST.com
     das_ad_pass: 123456
     ```
-   9. 配置CDH hosts
+   9. 配置CDH hosts。
    
       将cdh hosts地址按照示例模板格式进行填写，集群信息由CDH管理员提供。
       
@@ -223,7 +223,7 @@ vi /etc/fstab
 
    备注：
     
-   1. 如果安装失败继续执行，需要删除/tmp下的安装日志/tmp/aps_installation_failure_exit_code，并把aps.sh脚本里的最后边，注释掉已经安装成功的组件，如下图所示：
+   1. 如果安装失败继续执行，需要删除/tmp下的安装日志/tmp/aps_installation_failure_exit_code，并把aps.sh脚本里的最后边，注释掉已经安装成功的组件，如下所示：
    
      ```
        if [ "SAPS_INSTALL_MODE" = "all" ];then
@@ -249,11 +249,11 @@ vi /etc/fstab
       
      ```
      
-   2. 如果在install Docker-CE这一步出错的话：执行步骤为:
+   2. 如果在install Docker-CE时出错的话，可以执行如下步骤:
 
    到除节点一之外的节点上，分别执行脚本/usr/local/aps/tmp/devicemapper.sh，然后在节点一注释掉如上图部分内容，之后继续执行./aps.sh -m all;
 
-   3. 以上aps.sh执行成功后，aps用户在节点一上执行jps查看Controller,Scheduler,HeronServer,das,mpserver.jar,UserCenter,SpecsServer,FalconServer是否启动，使用docker ps 查看pipes,compass 是否启动。使用root用户在节点二上执行jps查看keytabserver是否启动成功。(执行jps，如果显示command not found。执行source /etc/profile。再次执行jps验证。)
+   3. 以上aps.sh执行成功后，aps用户在节点一上执行jps查看Controller、 Scheduler、HeronServer、das、mpserver.jar、UserCenter、SpecsServer、FalconServer是否启动，使用docker ps 查看pipes、compass 是否启动。使用root用户在节点二上执行jps查看keytabserver是否启动成功。(执行jps，如果显示command not found，则需先执行source /etc/profile，然后再次执行jps命令。)
 
 ## 修改启动参数
 
