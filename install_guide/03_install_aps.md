@@ -213,8 +213,7 @@ vi /etc/fstab
       ```	
 
 6.执行安装脚本。
-
-   ```
+  ```
    vim /home/aps/aps-deploy/bin/aps.sh
    $ cd /home/aps/aps-deploy/bin
    $ ./aps.sh -m all
