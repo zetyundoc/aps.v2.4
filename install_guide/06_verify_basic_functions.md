@@ -98,6 +98,6 @@ APS基础功能包括用户管理、集群管理、分析应用管理，请参�
 
 ###验证Zeppline与CDH集群的连通
 
-Zeppelin通过解释器将CDH集群中的任何语言/数据处理后端插入到Zeppelin中。在Zeppelin中，默认提供的解释器有Apache Spark、Python、Markdown、Shell、HDFS等。可以通过创建notebook并在notebook中使用相关解释器验证Zeppelin是否与CDH集群连通，验证步骤请参考《大数据分析平台用户手册》中“自助服务”章节的应用示例。
+Zeppelin通过解释器将CDH集群中的任何语言/数据处理后端插入到Zeppelin中。在Zeppelin中，默认提供的解释器有Apache Spark、Python、Markdown、Shell、HDFS等。可以通过创建notebook并在notebook中使用相关解释器验证Zeppelin是否与CDH集群连通，验证步骤请参考《DataCanvas APS 2.4 用户手册》中“自助服务”章节的应用示例。
 
 
