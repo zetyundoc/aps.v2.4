@@ -73,11 +73,11 @@
       ```
 6. 进入aps02节点，用zeppelin用户启动命令
 
-    ```
+   ```
     #su - zeppelin
     #cd /opt/zeppelin/bin
     #./zeppelin-daemon.sh start
-    ```
+   ```
     
 ### 配置Zeppelin的Interpreter
 
