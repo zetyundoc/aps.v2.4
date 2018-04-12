@@ -35,19 +35,19 @@
  
 4. 在aps02，aps03主备上修改shrio.ini。
  
-    文件路径
+   文件路径:
  
     ```
     /opt/zeppelin/conf
     ```
   
-    使用AD，请使用 shrio.ini.AD 替换 shrio.ini
+   使用AD，请使用 shrio.ini.AD 替换 shrio.ini
     
     ```  
     cp shrio.ini.AD shrio.ini
     ```
    
-    不使用AD，请使用 shrio.ini.NOAD 替换 shrio.ini
+   不使用AD，请使用 shrio.ini.NOAD 替换 shrio.ini
 
     ```
     cp shrio.ini.NOAD shrio.ini
@@ -91,7 +91,7 @@
 
 任何Interpreter添加、修改都需要重启。
 
-**参数说明**
+**参数说明:**
 
   * edit：对Interpreter进行修改
   * restart：Interpreter重启
@@ -112,7 +112,7 @@
   | zeppelin.python.maxResult | 1000|
 
 
-   **测试方法**
+   **测试方法:**
     
    ```
    %sh
@@ -176,7 +176,7 @@
    | /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar |	|
    | /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar |	 |
   
-**测试方法**
+**测试方法:**
   
     ```
     %hive
@@ -219,7 +219,7 @@
    | /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar	  |	-  |
    | /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar	 |	-    |
 
-**测试方法**
+**测试方法:**
 
      ```
      %impala
