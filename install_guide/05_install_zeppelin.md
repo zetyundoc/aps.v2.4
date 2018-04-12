@@ -161,20 +161,20 @@
 | zeppelin.jdbc.auth.type	 | KERBEROS|
 | zeppelin.jdbc.concurrent.max_connection |	10|
 | zeppelin.jdbc.concurrent.use | true |
-| zeppelin.jdbc.keytab.location|	|
-| zeppelin.jdbc.principal	 |	|
+| zeppelin.jdbc.keytab.location|  -	|
+| zeppelin.jdbc.principal	|  -	|
 
 **Dependencies**
   
    
    | artifact	  |	 exclude |
    | :--- | :--- |                
-   | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar	|  |
-   | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar |  |
+   | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar	|  - |
+   | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar | - |
    | default.password | |
-   | /opt/cloudera/parcels/CDH/jars/hadoop-common-2.6.0-cdh5.10.1.jar | |
-   | /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar |	|
-   | /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar |	 |
+   | /opt/cloudera/parcels/CDH/jars/hadoop-common-2.6.0-cdh5.10.1.jar |- |
+   | /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar | -	|
+   | /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar | -	 |
   
 **测试方法:**
   
@@ -247,7 +247,6 @@
    | zeppelin.R.image.width	|	100%  |
    | zeppelin.R.knitr|	true |
    | zeppelin.R.render.options |	out.format = 'html', comment = NA, echo = FALSE, results = 'asis', message = F, warning = F |
-   |
    | zeppelin.dep.localrepo	|	local-repo  |
    | zeppelin.interpreter.localRepo	|	/opt/zeppelin/local-repo/2DB7UNPCG |
    | zeppelin.interpreter.output.limit	|	102400  |
