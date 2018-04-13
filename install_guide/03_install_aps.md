@@ -152,7 +152,8 @@ vi /etc/fstab
  1. 配置docker存储所需磁盘（每个节点磁盘规划统一的情况下配置）。
   
     ```
-    docker_disk_file: [docker磁盘]   #配置每个节点统一提供的docker存储盘
+    #配置每个节点统一提供的docker存储盘，hosts中的配置会覆盖该配置，如果每个节点上盘符一致可在此处配置删除hosts中的配置
+    docker_disk_file: [docker磁盘]
     示例：
     docker_disk_file: /dev/sdc
     ```
@@ -173,6 +174,7 @@ vi /etc/fstab
   4. 配置keepalived网卡名称及VIP地址（需要ifconfig查看网卡信息进行配置）。
     ```
     # keepalived
+    #配置postgresql节点统一提供的网卡，hosts中的配置会覆盖该配置，如果每个postgresql节点上网卡一致可在此处配置删除hosts中的配置
     vrrp_interface: ens192
     postgresql_vip: postgresql的虚拟ip（向网管理申请）
     ```
