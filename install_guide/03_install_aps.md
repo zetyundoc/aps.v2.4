@@ -66,80 +66,82 @@ vi /etc/fstab
  该配置文件用于配置各组件安装服务器的IP地址，需要根据实际组网进行配置，配置样例如下所示： 
  
      ```
-     # aps hosts
-     [allips]
-     aps01_ip
-     aps02_ip
-     aps03_ip
-     aps04_ip
-     [dnsmasq-master]
-     aps01_ip
-     [dnsmasq-backup]
-     aps02_ip
-     [nfs-server]
-     aps03_ip
-     [nfs-client]
-     aps01_ip
-     aps02_ip
-     [docker-registry]
-    aps01_ip  docker_disk_file=/dev/sda    #指定docker存储盘
-    [docker-service]
-    aps02_ip  docker_disk_file=/dev/sda     #指定docker存储盘
-    aps03_ip  docker_disk_file=/dev/sda     #指定docker存储盘
-    aps04_ip docker_disk_file=/dev/vdb      #指定docker存储盘
-    [zookeeper]
-    aps01_ip
-    aps02_ip
-    aps03_ip
-    [mesos-master]
-    aps01_ip
-    aps02_ip
-    aps03_ip
-    [mesos-slave]
-    aps01_ip
-    aps02_ip
-    aps03_ip
-    [mesos-marathon]
-    aps04_ip
-    [rabbitmq-master]
-    aps02_ip
-    [rabbitmq-slave]
-    aps03_ip
-    [keepalived-master]
-    aps02_ip vrrp_interface: eth0 [keepalived-backup]
-    [postgresql-master]
-    aps02_ip
-    [postgresql-slave]
-    aps03_ip
-    [consul-master]
-    aps01_ip
-    aps02_ip
-    aps03_ip
-    [consul-slave]
-    aps04_ip
-    [git-master]
-    aps01_ip
-    [git-backup]
-    aps02_ip
-    [aps-push]
-    aps01_ip
-    [aps-pull]
-    aps01_ip
-    aps02_ip
-    aps03_ip
-    aps04_ip
-    [zeppelin]
-     aps02_ip
-    aps03_ip
-    [apollo]
-    aps02_ip
-    [nagios-server]
-    aps01_ip
-    [nagios-client]
-    aps01_ip
-    aps02_ip
-    aps03_ip
-    aps04_ip
+      # aps hosts
+      [allips]
+      aps01_ip
+      aps02_ip
+      aps03_ip
+      aps04_ip
+      [dnsmasq-master]
+      aps01_ip
+      [dnsmasq-backup]
+      aps02_ip
+      [nfs-server]
+      aps03_ip
+      [nfs-client]
+      aps01_ip
+      aps02_ip
+       [docker-registry]
+      aps01_ip  docker_disk_file=/dev/sda     #指定docker存储盘
+       [docker-service]
+      aps02_ip  docker_disk_file=/dev/sda     #指定docker存储盘
+      aps03_ip  docker_disk_file=/dev/sda     #指定docker存储盘
+      aps04_ip docker_disk_file=/dev/vdb      #指定docker存储盘
+      [zookeeper]
+      aps01_ip
+      aps02_ip
+      aps03_ip
+      [mesos-master]
+      aps01_ip
+      aps02_ip
+      aps03_ip
+      [mesos-slave]
+      aps01_ip
+      aps02_ip
+      aps03_ip
+      [mesos-marathon]
+      aps04_ip
+      [rabbitmq-master]
+      aps02_ip
+      [rabbitmq-slave]
+      aps03_ip
+      [keepalived-master]
+      aps02_ip vrrp_interface: eth0    #配置aps02_ip和其所在的网卡
+      [keepalived-backup]
+      aps03_ip vrrp_interface: eth0    #配置aps02_ip和其所在的网卡
+       [postgresql-master]
+      aps02_ip
+      [postgresql-slave]
+      aps03_ip
+      [consul-master]
+      aps01_ip
+      aps02_ip
+      aps03_ip
+      [consul-slave]
+      aps04_ip
+      [git-master]
+      aps01_ip
+      [git-backup]
+      aps02_ip
+      [aps-push]
+      aps01_ip
+      [aps-pull]
+      aps01_ip
+      aps02_ip
+      aps03_ip
+      aps04_ip
+      [zeppelin]
+      aps02_ip
+      aps03_ip
+      [apollo]
+      aps02_ip
+      [nagios-server]
+      aps01_ip
+      [nagios-client]
+      aps01_ip
+      aps02_ip
+      aps03_ip
+      aps04_ip
    
     ```
 
