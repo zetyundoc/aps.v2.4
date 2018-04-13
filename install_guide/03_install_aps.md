@@ -176,7 +176,7 @@ vi /etc/fstab
     # keepalived
     #配置postgresql节点统一提供的网卡，hosts中的配置会覆盖该配置，如果每个postgresql节点上网卡一致可在此处配置删除hosts中的配置
     vrrp_interface: ens192
-    postgresql_vip: postgresql的虚拟ip（向网管理申请）
+    postgresql_vip: postgresql的虚拟ip（向网络管理员申请）
     ```
   5. 配置krb5信息。
     ```
