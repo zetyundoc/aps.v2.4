@@ -43,7 +43,7 @@ su - aps -c "/home/aps/consul/consul-slave-start.sh"
 
 APS基础功能包括用户管理、集群管理、分析应用管理，请参考《DataCanvas APS 2.4管理员手册》和《DataCanvas APS 2.4用户手册》并按照如下步骤检查APS基本功能是否正常：
 
-1. 在浏览器地址栏中输入" http://&lt;APS01_IP&gt;:8080/nagios "输入账号密码进行登录，通过监控可查看到目前系统服务运行是否正常。
+1. 在浏览器地址栏中打开" http://&lt;APS01_IP&gt;:8080/nagios "并输入账号密码进行登录，通过监控可查看到目前系统服务运行是否正常。
 
  ```
  登录用户：nagiosadmin 密码：nagios
@@ -51,10 +51,10 @@ APS基础功能包括用户管理、集群管理、分析应用管理，请参�
 
  ![](/install_guide/fig/fig_11.png)
 
-2. 在浏览器地址栏中输入" http://&lt;APS_IP> "并按回车键，出现如下所示等登录界面，则说明APS安装成功。
+2. 在浏览器地址栏中打开" http://&lt;APS_IP> "，出现如下所示等登录界面，则说明APS安装成功。
 
  ```
- 登录用户：apsadmin@MCIPT.COM 密码：spdb@1234
+ 登录用户：apsadmin@TEST.COM 密码：Server2008！
  ```
 
  ![](/install_guide/fig/fig_12.png)
@@ -66,12 +66,10 @@ APS基础功能包括用户管理、集群管理、分析应用管理，请参�
 5. 使用普通操作员登录APS，依次创建数据模块、算法模块、分析模块和数据应用，检查是否可以操作成功。
 
 6. 登录Zeppelin，验证权限是否正常。
-
- 1. 以管理员身份登录APS并创建普通用户demo，并为该用户赋予访问探索交互的权限。
  
- 2. 以demo用户登录APS，选择“服务 > 分析应用 > 交互探索”，检查是否可以登录zeppelin。
+ 1. 以apsadmin@TEST.COM登录APS，选择“分析应用 > 自助分析”，检查是否可以登录zeppelin。
  
- 3. 在Zeppelin中，新建笔记本，并创建一个使用Shell的段，然后使用kilst命令检查是否可以正常查看登录信息，系统显示类似如下信息则说明keytab服务正常。
+ 2. 在Zeppelin中，新建笔记本，并创建一个使用Shell的段，然后使用kilst命令检查是否可以正常查看登录信息，系统显示类似如下信息则说明keytab服务正常。
  
  ![](/install_guide/fig/fig_13.png)
  
@@ -89,7 +87,7 @@ APS基础功能包括用户管理、集群管理、分析应用管理，请参�
  
 8. 查看Repo。
 
-   Apsrepo自动化安装完成后，在浏览器中输入如下地址，检查是否可以仓库是否可以正常访问：
+   Apsrepo自动化安装完成后，在浏览器中输入如下地址，检查仓库是否可以正常访问：
 
    * R仓库查看地址：" http://aps01:180 "
    * Python仓库查看地址：" http://aps01:18088 "
