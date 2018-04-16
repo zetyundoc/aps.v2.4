@@ -15,6 +15,23 @@
 
 说明：如无特殊说明，所有的操作步骤都是生产环境的投产步骤。
 
+## 关闭SELinux
+
+以下操作需要在每个节点上执行。
+
+1. 登录服务器并切换到root用户。
+    
+    su - root
+
+2. 编辑“/etc/selinux/config”文件，将SELINUX=enforcing改为SELINUX=disabled 。
+
+    vi /etc/selinux/config
+    
+3. 重启服务器。   
+    
+    shutdown -r now      #重启服务器
+
+
 ## 基础环境检查
 
 1. 检查aps服务器各节点的kernel。
