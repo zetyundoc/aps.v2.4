@@ -22,16 +22,19 @@
 
 1. 登录服务器并切换到root用户。
     
-    su - root
-
+  ```
+  su - root
+  ```
 2. 编辑“/etc/selinux/config”文件，将SELINUX=enforcing改为SELINUX=disabled 。
 
-    vi /etc/selinux/config
-    
+  ```
+  vi /etc/selinux/config
+  ```  
 3. 重启服务器。   
-    
-    shutdown -r now      #重启服务器
 
+ ```
+  shutdown -r now      #重启服务器
+ ```
 
 ## 基础环境检查
 
