@@ -43,11 +43,16 @@ APS组件结构图如下所示：
 
 安装用户名和密码规划如下表所示：
 
-|用户名	  |	 密码	 |  用户属组 |	   创建节点     |
-| :--- | :--- | :--- | :--- |                       
-|aps	  |   123456 |	aps	     |   所有           |
-|apsapp   |	123456	 |   aps	 |       所有       |
-|zeppelin |	zeppelin |	zeppelin |   aps02  aps03   |
+|用户名	  |	 密码	 |  用户属组 |	   创建节点     | 类型 |
+| :--- | :--- | :--- | :--- | :--- |                         
+|aps	  |   123456 |	aps	     |   所有           | Linux |
+|apsapp   |	123456	 |   aps	 |       所有   | Linux |
+|zeppelin |	zeppelin |	zeppelin |   aps02  aps03   |Linux |
+|apsapp@TEST.COM |  Server2008!	|  - |	-	  |  Asp        |
+|apollo	         |  admin	    |  - |	aps02 |	Apollo      |
+|apsapp	         |  Server2008!	|  - |	aps02 |	zeppelin    |
+|triceed	     |  Server2008!	|  - |  aps02 |	postgresql  |
+|admin	         |  admin	    |  - |	-	  |  rabbitmq   |
 
 #### 主机名规划和IP地址规划
 
