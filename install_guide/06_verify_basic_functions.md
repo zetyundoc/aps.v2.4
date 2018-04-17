@@ -37,6 +37,11 @@
 su - aps -c "/home/aps/consul/consul-slave-start.sh"
 ```
 
+4. 检查APS服务启动情况。
+
+   使用aps用户在节点一上执行jps查看Controller,Scheduler,HeronServer,das,mpserver.jar,UserCenter,SpecsServer,FalconServer是否启动，使用docker ps 查看pipes,compass 是否启动。使用root用户在节点二上执行jps查看keytabserver是否启动成功。(执行jps，如果显示command not found。执行source /etc/profile。再次执行jps验证。)
+
+
 ##验证APS基础功能
 
 使用APS管理员账号登录APS并创建普通操作员账号，《DataCanvas APS 2.4 管理员手册》和《DataCanvas APS 2.4用户手册》。
