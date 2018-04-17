@@ -124,6 +124,25 @@
   # scp -r .ssh 第四个节点IP:~/
 
   ```
+  
+## 创建安装用户并添加sudo权限
+使用root账户操作，在每台节点创建aps用户并添加sudo权限。
+
+1. 使创建安装用户：
+
+  ```
+  groupadd aps -g 3000
+  useradd -u 3000 -g aps -d /home/aps -s /bin/bash aps
+  echo aps | passwd --stdin aps 
+  ```
+  
+2. 为安装用户添加sudo权限：
+
+  ```
+  sed -i 'N;94a\aps ALL=NOPASSWD:ALL' /etc/sudoers
+  
+  ```
+
 
 ### 配置aps用户信任关系
 
@@ -152,23 +171,7 @@
 
   ```
 
-## 创建安装用户添加sudo权限
-使用root账户操作，在每台节点创建aps用户并添加sudo权限。
 
-1. 使用如下命令创建脚本存放位置：
-
-  ```
-  # aps-deploy/bin/aps-base-install.sh
-  ```
-  
-2. 脚本拷贝到每台节点的 root 目录下。
-
-3. 用root用户在第一台节点执行以下命令：
-      ```
-      ssh aps01 sh /root/aps-base-install.sh
-      ssh aps02 sh /root/aps-base-install.sh
-      ssh aps03 sh /root/aps-base-install.sh
-      ssh aps04 sh /root/aps-base-install.sh
       ```
 
 
