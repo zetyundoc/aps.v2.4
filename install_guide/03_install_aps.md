@@ -106,9 +106,9 @@ vi /etc/fstab
       [rabbitmq-slave]
       aps03_ip
       [keepalived-master]
-      aps02_ip vrrp_interface: eth0    #配置aps02_ip和其所在的网卡
+      aps02_ip vrrp_interface=eth0    #配置aps02_ip和其所在的网卡
       [keepalived-backup]
-      aps03_ip vrrp_interface: eth0    #配置aps02_ip和其所在的网卡
+      aps03_ip vrrp_interface=eth0    #配置aps02_ip和其所在的网卡
        [postgresql-master]
       aps02_ip
       [postgresql-slave]
