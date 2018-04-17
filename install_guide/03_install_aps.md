@@ -263,6 +263,10 @@ vi /etc/fstab
 安装完APS后需要修改Apollo动态配置参数，修改项如下所示：
 
 ```
+登陆apolo
+访问地址：第二个节点ip:28080
+Apolo账号：apollo
+Apollo密码：admin
 apollo -> pipes -> modelOnLine.nginx.ssh.password:123456
 [密码为marathon节点，默认为第四个节点的aps密码]
 ```
