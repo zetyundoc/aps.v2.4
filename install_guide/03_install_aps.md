@@ -162,7 +162,7 @@ vi /etc/fstab
    
     ```
     nfs_share_dir: /mnt/nfsdata
-    nfs_share_subnet: 当前网段的子网掩码/24
+    nfs_share_subnet: 子网/24
     ```
    
    3. 配置Zookeeper集群参数，默认即可。
@@ -257,7 +257,6 @@ vi /etc/fstab
 
    到除节点一之外的节点上，分别执行脚本/usr/local/aps/tmp/devicemapper.sh，然后在节点一注释掉如上图部分内容，之后继续执行./aps.sh -m all;
 
-   3. 以上aps.sh执行成功后，aps用户在节点一上执行jps查看Controller、 Scheduler、HeronServer、das、mpserver.jar、UserCenter、SpecsServer、FalconServer是否启动，使用docker ps 查看pipes、compass 是否启动。使用root用户在节点二上执行jps查看keytabserver是否启动成功。(执行jps，如果显示command not found，则需先执行source /etc/profile，然后再次执行jps命令。)
 
 ## 修改启动参数
 
