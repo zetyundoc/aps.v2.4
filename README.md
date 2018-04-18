@@ -8,7 +8,7 @@ DataCanvas APS 产品文档包含的内容如下所示：
 | 2 |  [安装手册](install_guide.md)| 本文档对DataCanvas APS产品的安装过程进行详细描述，包括安装前环境检查配置以及安装过程和安装后的检查。 |
 | 3 | [管理员手册](admin_guide.md) | 本文档对DataCanvas APS管理员的日常操作提供指导，如集群管理、用户管理等操作。 |
 | 4 | [用户手册](user_guide.md)| 本文对DataCanvas APS普通操作员的日常使用提供指导，包括创建数据模块、创建分析模块、创建工作流、交互探索等操作。 |
-| 5 | [标准模型](user_guide.md)| 本文对DataCanvas APS普通操作员的日常使用提供指导，包括创建数据模块、创建分析模块、创建工作流、交互探索等操作。 |
+| 5 | [标准模型](user_guide.md)| 本文对DataCanvas APS系统预置的模型进行介绍，通过本文用户可以了解如何使用系统预置模型。 |
 
 
 
