@@ -33,9 +33,9 @@
  ```
  
 3. 启动Consul服务。
-```
-su - aps -c "/home/aps/consul/consul-slave-start.sh"
-```
+  ```
+  su - aps -c "/home/aps/consul/consul-slave-start.sh"
+  ```
 
 4. 检查APS服务启动情况。
 
