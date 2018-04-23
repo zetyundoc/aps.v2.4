@@ -125,9 +125,24 @@ APS支持AD或非AD两种鉴权模式：
 Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过程，并给出其它interpreter的主要配置参数说明。
 
 1. 登录Zeppelin，在下拉菜单中选择“Interpreter”，如下图所示。
+   
+   ![](/install_guide/fig/fig_18.png) 
 
+2. 单击“Create”按钮，如下图所示：
 
-2. 
+   ![](/install_guide/fig/fig_19.png) 
+
+3. 配置相关参数，如下图所示：
+
+   ![](/install_guide/fig/fig_20.png)
+   
+4. 配置属性、依赖等参数，如下图所示：
+ 
+   ![](/install_guide/fig/fig_21.png)
+
+5. 单击“Save”，保存配置，如下图所示：
+
+   ![](/install_guide/fig/fig_22.png)
   
 
 
