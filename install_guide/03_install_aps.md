@@ -267,8 +267,7 @@ apollo -> pipes -> modelOnLine.nginx.ssh.password:123456
 ```
 $ ssh aps02
 $ sudo su - root 
-# cd /mnt/nfsfile/apsservice/keytabserver
-# sh run.sh start
+# cd /mnt/nfsfile/apsservice/keytabserver && sh run.sh start
 
 ```
 
