@@ -108,6 +108,12 @@ APS支持AD或非AD两种鉴权模式：
    ![](/install_guide/fig/fig_15.png) 
 
 3. 修改sh为非模拟用户。
+
+   如下图，搜索sh解释器，单击“edit”，并在option中设置**Per User**参数为**isolated**：
+   
+   ![](/install_guide/fig/fig_16.png) 
+
+
    
 
 
