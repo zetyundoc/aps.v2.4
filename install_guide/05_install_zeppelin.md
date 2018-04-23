@@ -179,6 +179,9 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 
 
 
+
+
+
 在浏览器中访问“http://aps01”， 登录，“服务-用户中心-安全中心-获取”。
 
 单击“服务-分析应用-自助分析”，右上角login，并使用管理员账号登录，点击用户名，在下拉菜单中选择“Interpreter”，配置各Interpreter如下所示。
