@@ -26,7 +26,7 @@ APS的安装包括基础组件以及APS私有组件的安装。在安装过程�
 ```
 mkdir -p /data/repo/
 sudo mkfs -t ext4 [repo磁盘]  #[repo磁盘]格式化为ext4格式
-mount [repo磁盘] /data/repo/
+mount [repo磁盘] /data/repo/ #挂载方式：nfs/nas，按实际场景选择
 tar zxvf CRAN.tar  -C /data/repo/
 tar zxvf pypi.tar  -C  /data/repo/
 ```
@@ -37,14 +37,18 @@ tar zxvf pypi.tar  -C  /data/repo/
 
 只需要在APS集群的主节点APS03上安装配置nfs磁盘。
 
-### 安装APS软件包
+### 配置NFS
 ```
-mkdir -p /mnt/data
-sudo mkfs -t ext4 [nfs磁盘]   #[nfs磁盘]格式化为ext4格式
-mount [nfs磁盘] /mnt/data 
+#su - root
+#mkdir -p /mnt/data
+#sudo mkfs -t ext4 [nfs磁盘]   #[nfs磁盘]格式化为ext4格式
+#mount [nfs磁盘] /mnt/data 
 添加开机自动挂载磁盘
-vi /etc/fstab
-[nfs磁盘]  /mnt/data  ext4   defaults   0   0
+#添加到rc.local开机自动挂载磁盘
+#su - root
+#vi /etc/rc.d/rc.local
+在末尾追加：
+mount [nfs磁盘] /mnt/data
 ```
 ## 安装过程
 
