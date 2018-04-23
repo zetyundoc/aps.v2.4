@@ -18,14 +18,14 @@ APS需要访问CDH获取集群资源，因此需要将CDH集群中各组件的�
 
    ```
    sudo su - root
-   scp -r root@ip-host:/opt/cloudera/parcels  /opt/cloudera/
-   scp -r root@ip-host:/etc/hadoop  /etc/
-   scp -r root@ip-host:/etc/hive  /etc/
-   scp -r root@ip-host:/etc/hbase /etc/ 
-   scp -r root@ip-host:/etc/impala  /etc/ 
-   scp -r root@ip-host:/etc/spark  /etc/
-   scp -r root@ip-host:/etc/spark2 /etc/
-   scp -r root@ip-host:/etc/zookeeper /etc/
+   scp -r root@cdh-ip:/opt/cloudera/parcels  /opt/cloudera/
+   scp -r root@cdh-ip:/etc/hadoop  /etc/
+   scp -r root@cdh-ip:/etc/hive  /etc/
+   scp -r root@cdh-ip:/etc/hbase /etc/ 
+   scp -r root@cdh-ip:/etc/impala  /etc/ 
+   scp -r root@cdh-ip:/etc/spark  /etc/
+   scp -r root@cdh-ip:/etc/spark2 /etc/
+   scp -r root@cdh-ip:/etc/zookeeper /etc/
    ```
 
 2. 配置环境变量。
