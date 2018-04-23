@@ -107,7 +107,7 @@ APS支持AD或非AD两种鉴权模式：
    
    ![](/install_guide/fig/fig_15.png) 
 
-
+3. 修改sh为非模拟用户。
    
 
 
