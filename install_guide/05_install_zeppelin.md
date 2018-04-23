@@ -81,7 +81,36 @@
     
 ### 配置Zeppelin的Interpreter
 
-使用AD需要配置模拟用户，不使用AD不使用模拟用户。
+#### 背景信息
+
+APS支持AD或非AD两种鉴权模式：
+* 使用AD：
+
+  需要配置模拟用户，并获取keytab：在浏览器中访问http://aps01，登录，“用户中心-安全中心-获取”。
+
+* 不使用AD（默认不使用AD）：
+
+  不使用模拟用户。
+
+    
+#### 设置模拟用户
+
+1. 登录Zeppelin。
+   
+   登录APS，并选择“分析应用”>“自助分析”>“Zeppelin”。
+   
+   Zeppelin默认登录账号为apsadmin，密码为Server2008! 
+   
+2. 设置Interpreter。
+
+   如下图，在下拉菜单中选择“Interpreter”。
+   
+   ![](/install_guide/fig/fig_15.png) 
+
+
+   
+
+
 
 在浏览器中访问“http://aps01”， 登录，“服务-用户中心-安全中心-获取”。
 
