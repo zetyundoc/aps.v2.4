@@ -316,9 +316,20 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 
 创建notebook，并在Paragraph中测试已配置的Interpreter。
 
-1. 新建notebook，如下图所示：
+1. 在Zeppelin中选择“Notebook” > “Create new note” ，如下图所示：
 
    ![](/install_guide/fig/fig_23.png)
+
+2. 在“Create new note” 对话框中输入相关参数，如下图所示：
+ 
+   ![](/install_guide/fig/fig_24.png)      
+   
+3. 单击“Create Note”，完成创建。
+
+4. 在新创建的Note中测试已配置的Interpreter。
+
+
+
 
 
 
