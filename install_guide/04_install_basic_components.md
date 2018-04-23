@@ -6,7 +6,7 @@ APS的基础组件主要是指APS运行时的依赖组件，包括Repo仓库、C
 
 ## 安装CDH Client
 
-APS需要访问CDH获取集群资源，因此需要将CDH集群中各组件的配置文件复制到APS集群的所有需要运行算法定制容器（与mesos-slave服务器安装相同）上以及进行相关环境变量的设置。
+APS需要访问CDH获取集群资源，因此需要将CDH集群中各组件的配置文件复制到APS集群的所有需要运行算法定制容器（与mesos-slave服务器安装相同）节点上（默认aps01、aps02、aps03节点）并进行相关环境变量的设置。
 
 1. 从CDH集群复制配置文件到APS集群中的主机。
 
@@ -14,18 +14,18 @@ APS需要访问CDH获取集群资源，因此需要将CDH集群中各组件的�
 
    说明:请使用实际IP地址替换如下命令中的“ip-host”。
   
-   在拷贝客户端之前需要确认所有的配置文件和客户端是否完成。
+   在拷贝客户端之前需要确认所有的配置文件和客户端是否完整，以下命令默认在aps01、aps02、aps03节点执行（拷贝过程中需要输入的cdh节点root密码向cdh集群管理员申请获取）。
 
    ```
    sudo su - root
-   scp -r /opt/cloudera/parcels  root@ip-host:/opt/cloudera/
-   scp -r /etc/hadoop  root@ip-host:/etc/
-   scp -r /etc/hive  root@ip-host:/etc/
-   scp -r /etc/hbase root@ip-host:/etc/ 
-   scp -r /etc/impala  root@ip-host:/etc/ 
-   scp -r /etc/spark  root@ip-host:/etc/
-   scp -r /etc/spark2 root@ip-host:/etc/
-   scp -r /etc/zookeeper root@ip-host:/etc/
+   scp -r root@ip-host:/opt/cloudera/parcels  /opt/cloudera/
+   scp -r root@ip-host:/etc/hadoop  /etc/
+   scp -r root@ip-host:/etc/hive  /etc/
+   scp -r root@ip-host:/etc/hbase /etc/ 
+   scp -r root@ip-host:/etc/impala  /etc/ 
+   scp -r root@ip-host:/etc/spark  /etc/
+   scp -r root@ip-host:/etc/spark2 /etc/
+   scp -r root@ip-host:/etc/zookeeper /etc/
    ```
 
 2. 配置环境变量。
