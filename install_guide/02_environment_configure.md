@@ -29,11 +29,13 @@
 
   ```
   vi /etc/selinux/config
+  
+  SELINUX=disabled
   ```  
-3. 重启服务器。   
+3. 检查Selinux。   
 
  ```
-  shutdown -r now      #重启服务器
+  getenforce
  ```
 
 ## 基础环境检查
