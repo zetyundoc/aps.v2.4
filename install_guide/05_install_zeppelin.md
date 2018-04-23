@@ -318,6 +318,8 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 
 1. 新建notebook，如下图所示：
 
+   ![](/install_guide/fig/fig_23.png)
+
 
 
 
