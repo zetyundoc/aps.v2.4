@@ -120,7 +120,7 @@ APS支持AD或非AD两种鉴权模式：
    ![](/install_guide/fig/fig_16.png) 
 
 
-#### 新增Hive interpreter
+#### 新增interpreter
 
 Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过程，并给出其它interpreter的主要配置参数说明。
 
@@ -144,6 +144,10 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 
    ![](/install_guide/fig/fig_22.png)
   
+
+** Hive Interpreter配置参数说明 **
+
+
 
 
 
