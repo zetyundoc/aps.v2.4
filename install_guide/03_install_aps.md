@@ -152,37 +152,20 @@ mount [nfs磁盘] /mnt/data
 5. 修改配置文件“/home/aps/aps-deploy/conf/aps.yml”。
 
    该配置文件用于配置相关组件的工作目录、IP地址等运行环境信息，其中大部分参数保留默认值即可，只需要关注并修改如下参数（参考示例，仅用于测试环境）：
- 
- 1. 配置docker存储所需磁盘（每个节点磁盘规划统一的情况下配置）。
-  
-    ```
-    #配置每个节点统一提供的docker存储盘，hosts中的配置会覆盖该配置，如果每个节点上盘符一致可在此处配置删除hosts中的配置
-    docker_disk_file: [docker磁盘]
-    示例：
-    docker_disk_file: /dev/sdc
-    ```
    
-   2. 配置NFS。
+   1. 配置NFS。
    
     ```
     nfs_share_dir: /mnt/nfsdata
     nfs_share_subnet: 子网/24
     ```
-   
-   3. 配置Zookeeper集群参数，默认即可。
 
-     ```
-     zookeeper_quorum: 1
-     ```
-
-  4. 配置keepalived网卡名称及VIP地址（需要ifconfig查看网卡信息进行配置）。
+  2. 配置keepalived网卡名称及VIP地址（需要ifconfig查看网卡信息进行配置）。
     ```
     # keepalived
-    #配置postgresql节点统一提供的网卡，hosts中的配置会覆盖该配置，如果每个postgresql节点上网卡一致可在此处配置删除hosts中的配置
-    vrrp_interface: ens192
     postgresql_vip: postgresql的虚拟ip（向网络管理员申请）
     ```
-  5. 配置krb5信息。
+  3. 配置krb5信息。
     ```
     # krb5
     krb5_default_realm: TEST.COM (向AD管理员申请)
@@ -190,25 +173,29 @@ mount [nfs磁盘] /mnt/data
     krb5_domain_realm: ['.zetyun.com','zetyun.com']
     ```
 
-  6. 配置zeppelin相关的AD。
+  4. 配置zeppelin相关的AD。
     ```
     # zeppelin
     shiro_searchBase: 'OU=f,DC=TEST,DC=COM'
     shiro_groupRolesMap: '"CN=apsadmin,OU=f_inc2,DC=TEST,DC=COM":"admin"'
     ```
-  7. 配置Mesos资源分配（建议按1:3比例分配）。
+  5. 配置Mesos资源分配（建议按1:3比例分配）。
      ```
     # mesos
-    mesos_resources:
-       'cpus(heron):2;cpus(controller):6;mem(heron):8000;mem(controller):24000;disk(heron):366843;disk(controller):550264'
+    mesos_resources: 'cpus(heron):2;cpus(controller):6;mem(heron):8000;mem(controller):24000;disk(heron):366843;disk(controller):550264'
     ```
 
-   8. 配置dasserver配置项（该项内容向CDH管理员申请）。
+   6. 配置dasserver配置项（该项内容向CDH管理员申请）。
     ```
     hdfs_host: hdfs访问ip
     livy_host: livy访问ip
-    das_ad_user: zetyun@TEST.com
-    das_ad_pass: 123456
+    das_livy_ad_user: livy@TEST.COM
+    das_livy_ad_pass: Server2008!
+    das_hdfs_ad_user: hdfs@TEST.com
+    das_hdfs_ad_pass: Server2008!
+    #是否开启AD认证（默认为关闭）
+    aps_useLdap: false
+    aps_enableKerberos: false
     ```
    9. 配置CDH hosts。
    
@@ -276,8 +263,10 @@ apollo -> pipes -> modelOnLine.nginx.ssh.password:123456
 ```
 ## 启动KeytabServer
 
+使用aps账号登陆第二个节点（密码：123456）
 ```
-# ssh aps02 
+$ ssh aps02
+$ sudo su - root 
 # cd /mnt/nfsfile/apsservice/keytabserver
 # sh run.sh start
 
