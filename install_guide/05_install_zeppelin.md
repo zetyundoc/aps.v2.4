@@ -147,7 +147,7 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 
 ** Hive Interpreter配置参数说明 **
 
-| name | value|
+| 参数名 | 取值 |
 | :--- | :--- |
 | **Interpreter Name**	　 |  - | 
 | hive	　             |  - | 
@@ -155,6 +155,7 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 | jdbc	　         | - | 
 | **Option**	       |   Globally shared | 
 | **Properties**	　 | - | 
+| **name**	| **value** | 
 | common.max_count	|  1000 | 
 | default.driver	|  org.apache.hive.jdbc.HiveDriver | 
 | default.password	| 　- | 
@@ -177,7 +178,7 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 
 ** Impala Interpreter配置参数说明 **
 
-| name | value |
+| 参数名 | 取值 |
 | :--- | :--- |
 | **Interpreter Name**	　 |  - | 
 | impala	　             |  - | 
@@ -185,6 +186,7 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 | jdbc	　         | - | 
 | **Option**	       |   Globally shared | 
 | **Properties**	　 | - | 
+| **name**	| **value** | 
 | common.max_count |	1000 |
 | default.driver |	org.apache.hive.jdbc.HiveDriver |
 | default.password |	- |
@@ -207,7 +209,7 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 
 ** Spark Interpreter配置参数说明 **
 
-| name | value |
+| 参数名 | 取值 |
 | :--- | :--- |
 | **Interpreter Name**	　 |  - | 
 | spark	　             |  - | 
@@ -215,6 +217,7 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 | spark	　         | - | 
 | **Option**	       |   Globally shared | 
 | **Properties**	　 | - | 
+| **name**	| **value** | 
 | args	　| - | 
 | master | 	local[*] | 
 | spark.app.name	 | Zeppelin | 
@@ -239,7 +242,7 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 
 ** Spark2 Interpreter配置参数说明 **
 
-| name | value |
+| 参数名 | 取值 |
 | :--- | :--- |
 | **Interpreter Name**	　 |  - | 
 | spark2	　             |  - | 
@@ -247,6 +250,7 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 | spark	　         | - | 
 | **Option**	       |   Globally shared | 
 | **Properties**	　 | - | 
+| **name**	| **value** | 
 | SPARK_HOME	|	/opt/cloudera/parcels/SPARK2/lib/spark2 |
 | args |	- |
 | master	|	yarn |
@@ -269,6 +273,45 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 | zeppelin.spark.sql.stacktrace	|FALSE |
 | zeppelin.spark.useHiveContext	| TRUE |
 
+
+** sh Interpreter配置参数说明 **
+
+| 参数名 | 取值 |
+| :--- | :--- |
+| **Interpreter Name**	　 |  - | 
+| sh	　             |  - | 
+| **Interpreter group**	　 |  - | 
+| sh	　         | - | 
+| **Option**	       |   Globally shared | 
+| **Properties**	　 | - | 
+| **name**	| **value** | 
+| shell.command.timeout.millisecs	| 60000 | 
+| shell.working.directory.user.home	| FALSE | 
+| zeppelin.interpreter.localRepo	| /opt/zeppelin/local-repo/2D9P9A8WW | 
+| zeppelin.interpreter.output.limit	| 102400 | 
+| zeppelin.shell.auth.type	　| - | 
+| zeppelin.shell.keytab.location	| 　- | 
+| zeppelin.shell.principal	　|  - | 
+
+
+** Python Interpreter配置参数说明 **
+
+| 参数名 | 取值 |
+| :--- | :--- |
+| **Interpreter Name**	　 |  - | 
+| python	　             |  - | 
+| **Interpreter group**	　 |  - | 
+| python	　         | - | 
+| **Option**	       |   Globally shared | 
+| **Properties**	　 | - | 
+| **name**	| **value** | 
+| zeppelin.interpreter.localRepo	| /opt/zeppelin/local-repo/2DDEHGWYS | 
+| zeppelin.interpreter.output.limit	| 102400 | 
+| zeppelin.python	python | - | 
+| zeppelin.python.maxResult	1000 | -| 
+
+
+
 在浏览器中访问“http://aps01”， 登录，“服务-用户中心-安全中心-获取”。
 
 单击“服务-分析应用-自助分析”，右上角login，并使用管理员账号登录，点击用户名，在下拉菜单中选择“Interpreter”，配置各Interpreter如下所示。
@@ -290,12 +333,19 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
   
   **Properties（示例）**
   
-  | name | value|
-  | :--- | :--- |
-  | zeppelin.interpreter.localRepo | /opt/zeppelin/local-repo/2D81Y8APD |
-  | zeppelin.interpreter.output.limit | 102400 |
-  | zeppelin.python |	python |
-  | zeppelin.python.maxResult | 1000|
+| name | value|
+| :--- | :--- |
+| zeppelin.interpreter.localRepo | /opt/zeppelin/local-repo/2D81Y8APD |
+| zeppelin.interpreter.output.limit | 102400 |
+| zeppelin.python |	python |
+| zeppelin.python.maxResult | 1000|
+| shell.command.timeout.millisecs	| 60000 | 
+| shell.working.directory.user.home	| FALSE | 
+| zeppelin.interpreter.localRepo	| /opt/zeppelin/local-repo/2D9P9A8WW | 
+| zeppelin.interpreter.output.limit	| 102400 | 
+| zeppelin.shell.auth.type	　| - | 
+| zeppelin.shell.keytab.location	| 　- | 
+| zeppelin.shell.principal	　|  - | 
 
 
    **测试方法:**
