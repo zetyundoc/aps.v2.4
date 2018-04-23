@@ -177,7 +177,33 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 
 ** Impala Interpreter配置参数说明 **
 
-
+| name | value |
+| :--- | :--- |
+| **Interpreter Name**	　 |  - | 
+| impala	　             |  - | 
+| **Interpreter group**	　 |  - | 
+| jdbc	　         | - | 
+| **Option**	       |   Globally shared | 
+| **Properties**	　 | - | 
+| common.max_count |	1000 |
+| default.driver |	org.apache.hive.jdbc.HiveDriver |
+| default.password |	- |
+| default.url | （根据cdh集群实际情况修改）jdbc:hive2://cdh1:21050/default;auth=noSasl |
+| default.user| impala |
+| zeppelin.interpreter.localRepo| /opt/zeppelin/local-repo/2DBNFBYEA |
+| zeppelin.interpreter.output.limit | 102400 |
+| zeppelin.jdbc.auth.type |	- |
+| zeppelin.jdbc.concurrent.max_connection	|	10 |
+| zeppelin.jdbc.concurrent.use | TRUE |
+| zeppelin.jdbc.keytab.location | - |
+| zeppelin.jdbc.principal |	- |
+| **Dependencies(根据cdh集群实际情况修改)** |	- |
+| **artifact** |	**exclude** |
+| /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar|	- |
+| /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar	|	- |
+| /opt/cloudera/parcels/CDH/jars/hadoop-common-2.6.0-cdh5.10.1.jar |	- |
+| /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar	|	- |
+| /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar	|	- |
 
 
 
