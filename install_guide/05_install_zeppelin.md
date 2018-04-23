@@ -205,8 +205,69 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 | /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar	|	- |
 | /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar	|	- |
 
+** Spark Interpreter配置参数说明 **
+
+| name | value |
+| :--- | :--- |
+| **Interpreter Name**	　 |  - | 
+| spark	　             |  - | 
+| **Interpreter group**	　 |  - | 
+| spark	　         | - | 
+| **Option**	       |   Globally shared | 
+| **Properties**	　 | - | 
+| args	　| - | 
+| master | 	local[*] | 
+| spark.app.name	 | Zeppelin | 
+| spark.cores.max	　 | - | 
+| spark.executor.memory	　 | - | 
+| zeppelin.R.cmd | 	R | 
+| zeppelin.R.image.width | 	1 | 
+| zeppelin.R.knitr | 	TRUE | 
+| zeppelin.R.render.options	 | out.format = 'html', comment = NA, echo = FALSE, results = 'asis', message = F, warning = F | 
+| zeppelin.dep.additionalRemoteRepository	 | spark-packages,http://dl.bintray.com/spark-packages/maven,false; | 
+| zeppelin.dep.localrepo	 | local-repo | 
+| zeppelin.interpreter.localRepo | 	/opt/zeppelin/local-repo/2DBRWKBPG | 
+| zeppelin.interpreter.output.limit	 | 102400 | 
+| zeppelin.pyspark.python	 | python | 
+| zeppelin.spark.concurrentSQL	 | FALSE | 
+| zeppelin.spark.importImplicit	 | TRUE | 
+| zeppelin.spark.maxResult	 | 1000 | 
+| zeppelin.spark.printREPLOutput	 | TRUE | 
+| zeppelin.spark.sql.stacktrace	 | FALSE | 
+| zeppelin.spark.useHiveContext	 | TRUE | 
 
 
+** Spark2 Interpreter配置参数说明 **
+
+| name | value |
+| :--- | :--- |
+| **Interpreter Name**	　 |  - | 
+| spark2	　             |  - | 
+| **Interpreter group**	　 |  - | 
+| spark	　         | - | 
+| **Option**	       |   Globally shared | 
+| **Properties**	　 | - | 
+| SPARK_HOME	|	/opt/cloudera/parcels/SPARK2/lib/spark2 |
+| args |	- |
+| master	|	yarn |
+| spark.app.name	|	Zeppelin|
+| spark.cores.max | - |
+| spark.executor.memory | - |
+| zeppelin.R.cmd	|	R |
+| zeppelin.R.image.width	|	1 |
+| zeppelin.R.knitr|	TRUE |
+| zeppelin.R.render.options |	out.format = 'html', comment = NA, echo = FALSE, results = 'asis', message = F, warning = F |
+| zeppelin.dep.additionalRemoteRepository	| spark-packages,http://dl.bintray.com/spark-packages/maven,false; |
+| zeppelin.dep.localrepo	|	local-repo |
+| zeppelin.interpreter.localRepo	|	/opt/zeppelin/local-repo/2DBPECR5E |
+| zeppelin.interpreter.output.limit	|	102400 |
+| zeppelin.pyspark.python|	python |
+| zeppelin.spark.concurrentSQL| FALSE |
+| zeppelin.spark.importImplicit	| TRUE |
+| zeppelin.spark.maxResult | 1000 |
+| zeppelin.spark.printREPLOutput | TRUE |
+| zeppelin.spark.sql.stacktrace	|FALSE |
+| zeppelin.spark.useHiveContext	| TRUE |
 
 在浏览器中访问“http://aps01”， 登录，“服务-用户中心-安全中心-获取”。
 
