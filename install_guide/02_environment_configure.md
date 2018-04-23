@@ -70,7 +70,7 @@
   systemctl restart network
   ```
   
-3. 检查磁盘
+4. 检查磁盘
 
   1. 检查每个节点是否具有单独1块数据盘，用于做docker存储，检查命令如下：
   
