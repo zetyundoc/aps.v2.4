@@ -328,17 +328,29 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 
 4. 在新创建的Note中测试已配置的Interpreter。
 
+   1. 测试Shell。
+      
+      ![](/install_guide/fig/fig_25.png)
+      
+   2. 测试Hive。
+   
+      ![](/install_guide/fig/fig_26.png)
 
-
-
-
-
-
-
-
-
-  
-
+   3. 测试Impala。
+    
+      ![](/install_guide/fig/fig_27.png)
+      
+   4. 测试Spark。
+   
+      ![](/install_guide/fig/fig_28.png)
+      
+   5. 测试Spark2。
+      
+      ![](/install_guide/fig/fig_29.png)
+      
+   6. 测试Python。
+      
+      ![](/install_guide/fig/fig_31.png)
 
 
 
