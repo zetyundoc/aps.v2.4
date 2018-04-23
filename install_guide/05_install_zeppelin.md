@@ -312,187 +312,22 @@ Zeppelin通过interpreter接入多种后端，如下以Hive为例给出配置过
 
 
 
-在浏览器中访问“http://aps01”， 登录，“服务-用户中心-安全中心-获取”。
+#### 测试已配置的Interpreter
 
-单击“服务-分析应用-自助分析”，右上角login，并使用管理员账号登录，点击用户名，在下拉菜单中选择“Interpreter”，配置各Interpreter如下所示。
+创建notebook，并在Paragraph中测试已配置的Interpreter。
 
- ![](/install_guide/fig/fig_04.png) 
+1. 新建notebook，如下图所示：
 
-任何Interpreter添加、修改都需要重启。
 
-**参数说明:**
 
-  * edit：对Interpreter进行修改
-  * restart：Interpreter重启
-  * remove： Interpreter删除
-  * 所有的interpreter 修改为Globally shared
+
+
+
+
   
-#### 配置Shell
-  
-  ![](/install_guide/fig/fig_05.png)
-  
-  **Properties（示例）**
-  
-| name | value|
-| :--- | :--- |
-| zeppelin.interpreter.localRepo | /opt/zeppelin/local-repo/2D81Y8APD |
-| zeppelin.interpreter.output.limit | 102400 |
-| zeppelin.python |	python |
-| zeppelin.python.maxResult | 1000|
-| shell.command.timeout.millisecs	| 60000 | 
-| shell.working.directory.user.home	| FALSE | 
-| zeppelin.interpreter.localRepo	| /opt/zeppelin/local-repo/2D9P9A8WW | 
-| zeppelin.interpreter.output.limit	| 102400 | 
-| zeppelin.shell.auth.type	　| - | 
-| zeppelin.shell.keytab.location	| 　- | 
-| zeppelin.shell.principal	　|  - | 
 
 
-   **测试方法:**
-    
-   ```
-   %sh
-   klist
-   ```
-        
-#### 配置Python
- 
-**Properties（示例）**
-  
-![](/install_guide/fig/fig_06.png)
 
-
-| name | value |
-| :--- | :--- |               
-| zeppelin.interpreter.localRepo(不添加)  |   opt/zeppelin/local-repo/2CYVZF7AQ |
-| zeppelin.interpreter.output.limit |	102400 |
-| zeppelin.python | python |
-| zeppelin.python.maxResult |   1000|
-
-**测试方法：**
-    
- ```
-    %python
-    import os
-    print “this is test”
- ```
-
-#### 配置Hive
-  
-![](/install_guide/fig/fig_07.png)
-  
-**Properties**
- 
-   
-| name | value |
-| :--- | :--- |                
-| common.max_count |  1000|
-| default.driver |	org.apache.hive.jdbc.HiveDriver |
-| default.password |	python|
-| default.url（根据实际cdh集群进行配置） | jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user |
-| default.user|	hive |
-| zeppelin.interpreter.localRepo（不添加） | python |
-| zeppelin.python.maxResult |  /opt/zeppelin/local-repo/2DAADHRKQ|
-| zeppelin.interpreter.output.limit |  102400|
-| zeppelin.jdbc.auth.type	 | KERBEROS|
-| zeppelin.jdbc.concurrent.max_connection |	10|
-| zeppelin.jdbc.concurrent.use | true |
-| zeppelin.jdbc.keytab.location|  -	|
-| zeppelin.jdbc.principal	|  -	|
-
-**Dependencies**
-  
-   
-   | artifact	  |	 exclude |
-   | :--- | :--- |                
-   | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar	|  - |
-   | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar | - |
-   | default.password | |
-   | /opt/cloudera/parcels/CDH/jars/hadoop-common-2.6.0-cdh5.10.1.jar |- |
-   | /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar | -	|
-   | /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar | -	 |
-  
-**测试方法:**
-  
-    ```
-    %hive
-    use aps;
-    create table t1(id int);
-    show tables;
-    select count(*) from test1;
-    ```
-
-#### 配置Impala
-  
-![](/install_guide/fig/fig_08.png)
- 
-**Properties**
-   
-   
-   | name | value |
-   | :--- | :--- |
-   | common.max_count |	1000  |
-   | default.driver |	org.apache.hive.jdbc.HiveDriver   |
-   | default.password |		- |
-   | default.url | jdbc:hive2://cdh5:10000/default;principal=hive/cdh5.test.com@TEST.COM;tez.queue.name=root.user  |
-   | default.user| impala   |
-   | zeppelin.interpreter.localRepo| /opt/zeppelin/local-repo/2D8U7GYP8  |
-   | zeppelin.interpreter.output.limit | 102400   |
-   | zeppelin.jdbc.auth.type |	KERBEROS |
-   | zeppelin.jdbc.concurrent.max_connection	|	10   |
-   | zeppelin.jdbc.concurrent.use | true |
-   | zeppelin.jdbc.keytab.location | -   |
-   | zeppelin.jdbc.principal |	-  |
-
-**Dependencies（示例）**
-   
-   
-   | artifact |	exclude  |
-   | :--- | :--- |
-   | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1.jar|	-    |
-   | /opt/cloudera/parcels/CDH/jars/hive-jdbc-1.1.0-cdh5.10.1-standalone.jar	    |	-  |
-   | /opt/cloudera/parcels/CDH/jars/hadoop-common-2.6.0-cdh5.10.1.jar |	-     |
-   | /opt/cloudera/parcels/CDH/jars/hive-shims-0.23-1.1.0-cdh5.10.1.jar	  |	-  |
-   | /opt/cloudera/parcels/CDH/jars/hadoop-auth-2.6.0-cdh5.10.1.jar	 |	-    |
-
-**测试方法:**
-
-     ```
-     %impala
-    show tables;
-    select count(*) from test1;
-    ```
-
-#### 配置spark2
-
-![](/install_guide/fig/fig_09.png)
-   
-**Properties**
-   
-   
-   | name |	value |
-   | :--- | :--- |                                                                                                                                        
-   | SPARK_HOME	|	/opt/cloudera/parcels/SPARK2/lib/spark2  |
-   | args |	-  |
-   | master	|	yarn    |
-   | spark.app.name	|	zeppelin| 
-   | spark.cores.max | |
-   | spark.deployMode	|	client  |
-   | spark.yarn.queue |	root.yarn_default |
-   | zeppelin.R.cmd	|	R |
-   | zeppelin.R.image.width	|	100%  |
-   | zeppelin.R.knitr|	true |
-   | zeppelin.R.render.options |	out.format = 'html', comment = NA, echo = FALSE, results = 'asis', message = F, warning = F |
-   | zeppelin.dep.localrepo	|	local-repo  |
-   | zeppelin.interpreter.localRepo	|	/opt/zeppelin/local-repo/2DB7UNPCG |
-   | zeppelin.interpreter.output.limit	|	102400  |
-   | zeppelin.pyspark.python|	/opt/cloudera/parcels/SPARK2/bin/spark2-submit   |         
-   | zeppelin.spark.concurrentSQL|    false |
-   | zeppelin.spark.importImplicit	|    true |
-   | zeppelin.spark.maxResult |    1000|
-   | zeppelin.spark.printREPLOutput |    true  |
-   | zeppelin.spark.sql.stacktrace	 |    false  |
-   | zeppelin.spark.useHiveContext	 |    false |
 
 #### 配置Notebook settings：
 
