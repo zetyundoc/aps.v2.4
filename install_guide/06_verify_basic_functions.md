@@ -12,13 +12,6 @@
  echo "nameserver [dns_ip]" >> /etc/resolv.conf
  ```
  
- 执行如下命令增加Registry备份：
-
- ```
- vim /mnt/nfsfile/backup/script/aps_bak.sh
- #sh $CURR/docker_registry_backup.sh
- 将26行的docker_registry_backup.sh的“#”取消掉
- ```
 2. 同步NTP时间。
 
  ```
@@ -72,7 +65,7 @@ APS基础功能包括用户管理、集群管理、分析应用管理，请参�
 
 4. 使用普通操作员登录APS，在“服务>集群管理”页面检查是否可以创建并连接到已存在的CDH集群。
 
-5. 使用普通操作员登录APS，依次创建数据模块、算法模块、分析模块和数据应用，检查是否可以操作成功。
+5. 使用apsadmin@TEST.COM登录APS，依次创建数据模块、算法模块、分析模块和数据应用，检查是否可以操作成功。
 
 6. 登录Zeppelin，验证权限是否正常。
  
