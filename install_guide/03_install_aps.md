@@ -40,15 +40,14 @@ tar zxvf pypi.tar  -C  /data/repo/
 ### 配置NFS
 ```
 #su - root
-#mkdir -p /mnt/data
+#mkdir -p /mnt/nfsdata
 #sudo mkfs -t ext4 [nfs磁盘]   #[nfs磁盘]格式化为ext4格式
-#mount [nfs磁盘] /mnt/data 
-添加开机自动挂载磁盘
-#添加到rc.local开机自动挂载磁盘
+#mount [nfs磁盘] /mnt/nfsdata 
+#添加开机自动挂载磁盘
 #su - root
-#vi /etc/rc.d/rc.local
-在末尾追加：
-mount [nfs磁盘] /mnt/data
+sudo vi /etc/fstab
+末尾添加
+/dev/vdc     /mnt/nfsdata/     ext4     defaults     0 0 
 ```
 ## 安装过程
 
@@ -193,7 +192,8 @@ mount [nfs磁盘] /mnt/data
     das_livy_ad_pass: Server2008!
     das_hdfs_ad_user: hdfs@TEST.com
     das_hdfs_ad_pass: Server2008!
-    #是否开启AD认证（默认为关闭）
+    model_release_node_aps_password: 123456 
+    #是否开启AD认证（默认为关闭，两个设置必须同时为true或者同时为fales）
     aps_useLdap: false
     aps_enableKerberos: false
     ```
@@ -209,7 +209,6 @@ mount [nfs磁盘] /mnt/data
 
 6.执行安装脚本。
   ```
-   vim /home/aps/aps-deploy/bin/aps.sh
    $ cd /home/aps/aps-deploy/bin
    $ ./aps.sh -m all
   ```
@@ -249,18 +248,6 @@ mount [nfs磁盘] /mnt/data
    到除节点一之外的节点上，分别执行脚本/usr/local/aps/tmp/devicemapper.sh，然后在节点一注释掉如上图部分内容，之后继续执行./aps.sh -m all;
 
 
-## 修改启动参数
-
-安装完APS后需要修改Apollo动态配置参数，修改项如下所示：
-
-```
-登陆apolo
-访问地址：第二个节点ip:28080
-Apolo账号：apollo
-Apollo密码：admin
-apollo -> pipes -> modelOnLine.nginx.ssh.password:123456
-[密码为marathon节点，默认为第四个节点的aps密码]
-```
 ## 启动KeytabServer
 
 使用aps账号登陆第二个节点（密码：123456）
