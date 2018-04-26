@@ -83,6 +83,10 @@ APS组件结构图如下所示：
 |-				       | Zeppelin		     |  Zeppelin			|    -                |
 |nagios（server\agent） |	nagios（agent）  | 		nagios（agent）	|	nagios（agent）   |
 |aps					|	aps				 |  	-				|	-                 |
+|  - |	Apollo	 |  	- |	-     |
+|  - |	-	 |  	- |	marathon     |
+
+
 
 ## 安装包列表
 
