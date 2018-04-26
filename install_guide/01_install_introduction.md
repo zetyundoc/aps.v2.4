@@ -70,11 +70,12 @@ APS组件结构图如下所示：
 |aps01			       | aps02			     |  aps03 				|    aps04            |
 | :--- | :--- | :--- | :--- |                                                             
 |docker-ce		       | docker-ce		     |  docker-ce			|     docker-ce       |
+|docker registry | -		   |  -		|     docker registry       |
 |dnsmasq			   | dnsmasq		 |  	    -			|		-             |
 |consul(server)	       | consul(server)	     |  consul(server)		|      consul(client) |
 |Zookeeper		       | Zookeeper		     |  Zookeeper	        |    -                 |
-|mesos(master)	       | mesos(master)	     |  mesos(master)	    |     -                |
-|mesos(slave)	       | mesos(slave)	     |  mesos(slave)        |      -               |
+|mesos(master)	       | mesos(master)	     |  mesos(master)	    | mesos(master)   |
+|mesos(slave)	       | mesos(slave)	     |  mesos(slave)        |  mesos(slave)      |
 |git				   |     git		     |     -                 |      -               |
 |-				       | rabbitmq		     |  rabbitmq	        |       -              |
 |-				       | postgresql		     |  postgresql	        |      -               |
