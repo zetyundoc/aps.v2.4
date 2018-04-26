@@ -94,12 +94,12 @@ APS组件结构图如下所示：
 
 |安装包名称	|说明|
 | :--- | :--- |
-|aps-deploy-*tgz	|APS安装包，包括基础组件以及APS私有组件的安装程序包以及安装脚本。|
+|aps-deploy-v2.4.tgz	|APS安装包，包括基础组件以及APS私有组件的安装程序包以及安装脚本。|
 |CRAN.tar	|R的repo源。|
 |pypi.tar	|python的repo源。|
-| kernel-3.10.0-514.26.2.el7.x86_64.rpm	| 存放在pkglist.tar中 | 
-| shrio.ini.NOAD | 	存放在pkglist.tar中 | 
-| delete_user_util.sh | 	存放在pkglist.tar中 | 
-| removeInterpreter.sh | 	存放在pkglist.tar中 | 
+| kernel-3.10.0-514.26.2.el7.x86_64.rpm	| pkglist.tar | 
+| shrio.ini.NOAD | 	pkglist.tar | 
+| delete_user_util.sh | 	pkglist.tar | 
+| removeInterpreter.sh | 	pkglist.tar | 
 
 说明:安装包名称中的*表示软件版本号，请以实际情况为准。
