@@ -16,11 +16,11 @@ APS组件结构图如下所示：
 
 ### 安装软件清单
 
-本手册仅限于centos 7(1611) 64位server GUI版本系统,并在该系统下进行测试,开发等操作。安装过程使用非root用户（如可在每台主机创建aps用户）进行，且安装包使用本地yum源。基础组件的安装版本如下表所示：
+本手册仅限于centos 7(1611) 64位server for GUI版本系统,并在该系统下进行测试,开发等操作。安装过程使用非root用户（如可在每台主机创建aps用户）进行，且安装包使用本地yum源。基础组件的安装版本如下表所示：
 
 | 组件名称 | 版本 |
 | :--- | :--- | 
-| Centos |	1611-server GUI |
+| Centos |	1611-server for GUI |
 | jdk	| jdk1.8.0_144 |
 | docker-ce	| 17.09.0.ce-1.el7.centos |
 | mesos	| 1.4.1-2.0.1 |
@@ -28,7 +28,7 @@ APS组件结构图如下所示：
 | consul	| 0.9.3 |
 | git	| 1.8.3.1-12.el7_4 |
 | postgresql93-server |	9.3.20 |
-| APS组件	| 0.9 |
+| APS组件	| 2.4 |
 | zeppelin	| 0.7.3 |
 | nginx	| 1.12  |
 | redis	| 3.2.9 |
@@ -48,7 +48,7 @@ APS组件结构图如下所示：
 |aps	  |   123456 |	aps	     |   所有           | Linux |
 |apsapp   |	123456	 |   aps	 |       所有   | Linux |
 |zeppelin |	zeppelin |	zeppelin |   aps02  aps03   |Linux |
-|apsapp@TEST.COM |  Server2008!	|  - |	-	  |  Asp        |
+|apsapp@TEST.COM |  Server2008!	|  - |	-	  |  aps        |
 |apollo	         |  admin	    |  - |	aps02 |	Apollo      |
 |apsapp	         |  Server2008!	|  - |	aps02 |	zeppelin    |
 |triceed	     |  Server2008!	|  - |  aps02 |	postgresql  |
