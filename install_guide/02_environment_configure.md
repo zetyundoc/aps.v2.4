@@ -24,18 +24,13 @@
   ```
   su - root
   ```
-2. 编辑“/etc/selinux/config”文件，将SELINUX=enforcing改为SELINUX=disabled 。
+2. 执行如下命令 。
 
   ```
-  vi /etc/selinux/config
+  sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
+  setenforce 0 
   
-  SELINUX=disabled
   ```  
-3. 检查Selinux。   
-
- ```
-  getenforce
- ```
 
 ## 基础环境检查
 
