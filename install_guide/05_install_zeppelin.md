@@ -10,17 +10,15 @@
 
 请参照如下步骤安装Zeppelin组件，以下步骤在主备都需要执行。
 
-1. 在aps02上执行如下命令完成基础配置。
+1. 配置Zeppelin免密登录。
 
-   zeppelin的日志和配置目录修改
-   新建/mnt/nfsfile/log/zeppelin目录
+   ```
+   su - zeppelin
+   ssh-keygen -f ~/.ssh/id_rsa -N '' -t rsa -q -b 2048
+   ssh-copy-id zeppelin@localhost
    
    ```
-   sudo su - root
-   mkdir -p /mnt/nfsfile/log/zeppelin
-   chmod 775 /mnt/nfsfile/log/zeppelin
-   chown -R zeppelin:zeppelin /mnt/nfsfile/zeppelin
-    ```
+
  
 2. 备份配置文件。
 
@@ -29,36 +27,9 @@
     cp -r /mnt/nfsfile/zeppelin/conf  /mnt/nfsfile/zeppelin/confbak
     ```
     
-3. 在aps02，aps03主备上修改配置文件。
-
-   ```
-   su - zeppelin  密码 zeppelin 
-   vi /opt/zeppelin/bin/common.sh 
-   export ZEPPELIN_CONF_DIR="/mnt/nfsfile/zeppelin/conf" 
-   export  ZEPPELIN_LOG_DIR="/mnt/nfsfile/log/zeppelin"
-  ```
  
-4. 在aps02，aps03主备上修改shrio.ini，配置文件在 pkglist.tar 中提供。
- 
-   文件路径:
- 
-    ```
-    cd /mnt/nfsfile/zeppelin
-    ```
-  
-   使用AD，请使用 shrio.ini.AD 替换 shrio.ini
     
-    ```  
-    cp shrio.ini.AD shrio.ini
-    ```
-   
-   不使用AD，请使用 shrio.ini.NOAD 替换 shrio.ini
-
-    ```
-    cp shrio.ini.NOAD shrio.ini
-    ```
-    
-5. 检查Zeppelin配置文件及启动服务。
+3. 检查Zeppelin配置文件及启动服务。
  
    1. 检查aps02和aps03节点的/opt/zeppelin/下的文件属主，是否都属于zeppelin用户，若不是则可执行如下命令修改相应文件的属主：
 
@@ -71,7 +42,7 @@
       ```
       chown -R zeppelin:zeppelin /mnt/nfsfile/zeppelin/
       ```
-6. 进入aps02节点，用zeppelin用户执行如下命令启动Zeppelin。
+4. 进入aps02节点，用zeppelin用户执行如下命令启动Zeppelin。
 
    ```
     #su - zeppelin
